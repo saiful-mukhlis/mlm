@@ -110,7 +110,7 @@ public class Main {
 		}
 		long t2 = System.currentTimeMillis();
 		long t3 = t2 - t1;
-		App.showErrSementara(t2 + "-" + t1 + "=" + t3);
+		//App.showErrSementara(t2 + "-" + t1 + "=" + t3);
 	}
 
 }
