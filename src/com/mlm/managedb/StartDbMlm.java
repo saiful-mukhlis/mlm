@@ -55,7 +55,7 @@ public class StartDbMlm {
 				OClass.INDEX_TYPE.UNIQUE);
 		grp.createProperty(FGrp.NAME, OType.STRING).createIndex(
 				OClass.INDEX_TYPE.UNIQUE);
-		grp.createProperty(FGrp.USRS, OType.LINKLIST);
+		grp.createProperty(FGrp.USRS, OType.LINKSET);
 		grp.createProperty(FGrp.CREATE_BY, OType.LINK, usr);
 		grp.createProperty(FGrp.UPDATE_BY, OType.LINK, usr);
 

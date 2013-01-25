@@ -163,6 +163,7 @@ public class LoginDialog {
 		try {
 			ODatabaseDocumentTx db = App.getDbdLocal();
 			ODocument usr = App.getUsrDao().getOne(db, FUsr.USERNAME, u);
+			System.out.println(usr.toJSON());
 			if (usr == null) {
 				Err.showErrUsernameTidakTerdaftar();
 			} else {

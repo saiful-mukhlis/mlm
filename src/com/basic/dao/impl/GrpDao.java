@@ -11,6 +11,8 @@ import org.basic.dao.abst.DaoAbstract;
 
 import com.basic.db.FGrp;
 import com.basic.db.FUsr;
+import com.basic.entity.Grp;
+import com.basic.entity.Usr;
 import com.basic.lang.LGrp;
 import com.global.App;
 import com.global.DataUser;
@@ -227,13 +229,13 @@ public class GrpDao extends DaoAbstract {
 		}
 	}
 	
-	public String createByToString(ODocument o){
-		ODocument tmp=getCreateBy(o);
-		if (tmp==null) {
-			return "";
-		}
-		return App.getUsrDao().getNama(tmp);
-	}
+//	public String createByToString(ODocument o){
+//		ODocument tmp=getCreateBy(o);
+//		if (tmp==null) {
+//			return "";
+//		}
+//		return App.getUsrDao().getNama(tmp);
+//	}
 	
 	
 	
@@ -253,13 +255,13 @@ public class GrpDao extends DaoAbstract {
 		}
 	}
 	
-	public String updateByToString(ODocument o){
-		ODocument tmp=getUpdateBy(o);
-		if (tmp==null) {
-			return "";
-		}
-		return App.getUsrDao().getNama(tmp);
-	}
+//	public String updateByToString(ODocument o){
+//		ODocument tmp=getUpdateBy(o);
+//		if (tmp==null) {
+//			return "";
+//		}
+//		return App.getUsrDao().getNama(tmp);
+//	}
 	
 	
 	public ODocument getCreateBy2(ODocument o){
@@ -329,45 +331,42 @@ public class GrpDao extends DaoAbstract {
 	public void factoryModelFirst(ODatabaseDocumentTx db) {
 		if (getCount(db) == 0) {
 
-			ODocument usr = App.getUsrDao().getOne(db, FUsr.USERNAME, "admin");
-			if (usr == null) {
+			ODocument usrDoc = App.getUsrDao().getOne(db, FUsr.USERNAME, "admin");
+			if (usrDoc == null) {
 				App.getUsrDao().factoryModelFirst(db);
-				usr = App.getUsrDao().getOne(db, FUsr.USERNAME, "admin");
+				usrDoc = App.getUsrDao().getOne(db, FUsr.USERNAME, "admin");
 			}
 
-			ODocument admin = new ODocument(getClassName());
-			setName(admin, "Admin");
-			setNote(admin, "Hak Akses untuk Super User");
+			Usr usr=new Usr(usrDoc);
+			
+			Grp grp=new Grp();
+			grp.setName("Admin");
+			grp.setNote("Hak akses untuk Super User");
 			StringBuffer tmp = new StringBuffer();
 			for (int i = 1; i < 50; i++) {
 				tmp.append("x" + i + "x");
 			}
-			admin.field(FGrp.KEY, tmp.toString());
-			setCreateBy(admin, usr);
-			setCreateAt(admin, new Date());
-
-			HashSet<ODocument> usrs = new HashSet<>();
+			grp.setKey(tmp.toString());
+			
+			grp.setCreateAt(new Date());
+			grp.setCreateBy(usrDoc);
+			
+			List<Usr> usrs=new ArrayList<>();
 			usrs.add(usr);
-			setUsrs(admin, usrs);
 
-			ODocument pegawai = new ODocument(getClassName());
-			setName(pegawai, "Pegawai");
-			setNote(pegawai, "Hak Akses untuk Pegawai");
-			setCreateBy(pegawai, usr);
-			setCreateAt(pegawai, new Date());
+			grp.setUsrs(usrs);
+			
 
 			try {
 				db.begin(TXTYPE.OPTIMISTIC);
 
-				save(db, admin);
-				// memberi group pada admin
-				App.getUsrDao().setGrp(usr, admin);
-				usr.save();
-
-				save(db, pegawai);
+				save(db, grp.getDoc());
+				usr.setGrp(grp);
+				App.getUsrDao().save(db, usr.getDoc());
 				db.commit();
 
 			} catch (Exception e) {
+				e.printStackTrace();
 				db.rollback();
 			}
 
