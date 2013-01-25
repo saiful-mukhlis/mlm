@@ -1,7 +1,6 @@
 package com.basic.entity;
 
 import com.basic.db.FBos;
-import com.basic.db.FJenisPekerjaan;
 import com.orientechnologies.orient.core.metadata.schema.OType;
 import com.orientechnologies.orient.core.record.impl.ODocument;
 
@@ -12,11 +11,9 @@ public class Bos {
 
 	private ODocument doc;
 
-	
-	
 	public Bos() {
 		super();
-		doc=new ODocument(FBos.TABLE);
+		doc = new ODocument(FBos.TABLE);
 	}
 
 	public Bos(ODocument doc) {
@@ -55,7 +52,6 @@ public class Bos {
 		return doc;
 	}
 
-
 	public void setDoc(ODocument doc) {
 		this.id = doc.field(FBos.ID);
 		this.name = doc.field(FBos.NAME);
@@ -63,7 +59,4 @@ public class Bos {
 		this.doc = doc;
 	}
 
-
-	
-	
 }

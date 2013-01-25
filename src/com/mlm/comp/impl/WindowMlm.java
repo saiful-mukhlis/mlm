@@ -3,6 +3,7 @@ package com.mlm.comp.impl;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+import org.basic.comp.abst.Window;
 import org.basic.comp.abst.WindowAbs;
 import org.noos.xing.mydoggy.mydoggyset.action.AddContentAction;
 import org.noos.xing.yasaf.plaf.action.ViewContextAction;
@@ -19,8 +20,8 @@ public class WindowMlm extends WindowAbs {
 
 		toolbar = new ToolbarMlm();
 		menu = new MenuMlm();
-		welcomeComponent = new JPanel();
-		welcomeComponent.add(new JLabel("ccccccccccccc"));
+		welcomeComponent = new WelcomePanel();
+		((WelcomePanel) welcomeComponent).init();
 		welcomeAca = new AddContentAction(toolWindowManager,
 				LWindow.ID_WELCOME, LWindow.TITLE_WELCOME, IconBase.APP,
 				welcomeComponent, LWindow.TOOLTIP_WELCOME,
