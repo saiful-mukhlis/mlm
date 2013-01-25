@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.util.Date;
 
 import com.basic.db.FUsr;
+import com.global.util.Account;
 import com.orientechnologies.orient.core.metadata.schema.OType;
 import com.orientechnologies.orient.core.record.impl.ODocument;
 
@@ -71,6 +72,14 @@ public class Usr {
 	}
 
 	public void setPassword(String password) {
+		try {
+			doc.field(FUsr.PASSWORD, Account.md5(password), OType.STRING);
+			this.password = password;
+		} catch (Exception e) {
+		}
+	}
+	
+	public void setPasswordTanpaMd5(String password) {
 		doc.field(FUsr.PASSWORD, password, OType.STRING);
 		this.password = password;
 	}
