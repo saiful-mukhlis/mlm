@@ -1,9 +1,5 @@
 package com.mlm.comp.impl;
 
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-
-import org.basic.comp.abst.Window;
 import org.basic.comp.abst.WindowAbs;
 import org.noos.xing.mydoggy.mydoggyset.action.AddContentAction;
 import org.noos.xing.yasaf.plaf.action.ViewContextAction;
@@ -28,9 +24,6 @@ public class WindowMlm extends WindowAbs {
 				LWindow.MNEMONIC_WELCOME.charAt(0));
 		welcomeVca=new ViewContextAction(LWindow.TITLE_WELCOME, IconBase.APP, viewContext, LWindow.ID_WELCOME);
 		viewContext.addViewContextChangeListener(welcomeAca);
-		
-		
-		
 	}
 
 	@Override
