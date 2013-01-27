@@ -159,21 +159,19 @@ public class Grp {
 
 	public List<Usr> getUsrs() {
 		if (usrs==null) {
-			//this.usrDocs=doc.field(FGrp.USRS);
 			ODatabaseDocumentTx db=App.getDbdLocal();
-			//App.getGrpDao().printAll(db);
-			OMVRBTreeRIDSet ids=doc.field(FGrp.USRS, OType.LINKSET);
-//			System.out.println(ids.toDocument());;
-			Object[] x=ids.toArray();
-			System.out.println(x[0]);
-			ids.remove(x[0]);
-			doc.save();
-			App.getUsrDao().printAll(db);
-			App.getGrpDao().printAll(db);
-			ids.add((OIdentifiable) x[0]);
-			doc.save();
-//			System.out.println();;
-//			System.out.println(doc.field(FGrp.USRS).getClass().toString());
+			this.usrDocs=App.getUsrDao().getAllByColumn(db, FUsr.GRP, getDoc().getIdentity());
+			db.close();
+			this.usrs=new ArrayList<>();
+			for (ODocument o : usrDocs) {
+				this.usrs.add(new Usr(o));
+			}
+		}
+		return usrs;
+	}
+	public List<Usr> getUsrs(boolean update) {
+		if (usrs==null || update) {
+			ODatabaseDocumentTx db=App.getDbdLocal();
 			this.usrDocs=App.getUsrDao().getAllByColumn(db, FUsr.GRP, getDoc().getIdentity());
 			db.close();
 			this.usrs=new ArrayList<>();
@@ -184,15 +182,6 @@ public class Grp {
 		return usrs;
 	}
 
-	public void setUsrs(List<Usr> usrs) {
-		List<ODocument> usrDocs=new ArrayList<>();
-		for (Usr usr : usrs) {
-			usrDocs.add(usr.getDoc());
-		}
-		doc.field(FGrp.USRS, usrDocs, OType.LINKSET);
-		this.usrDocs = usrDocs;
-		this.usrs = usrs;
-	}
 
 	public List<ODocument> getUsrDocs() {
 		return usrDocs;

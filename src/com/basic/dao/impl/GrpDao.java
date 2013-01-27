@@ -181,11 +181,11 @@ public class GrpDao extends DaoAbstract {
 		o.field(FGrp.USRS, users, OType.LINKSET);
 		return this;
 	}
-	
-	public List<ODocument> getUsrs(ODocument o){
-		List<ODocument> tmp=o.field(FGrp.USRS);
-		if (tmp==null) {
-			tmp=new ArrayList<>();
+
+	public List<ODocument> getUsrs(ODocument o) {
+		List<ODocument> tmp = o.field(FGrp.USRS);
+		if (tmp == null) {
+			tmp = new ArrayList<>();
 		}
 		return tmp;
 	}
@@ -196,90 +196,87 @@ public class GrpDao extends DaoAbstract {
 		}
 		return this;
 	}
-	
-	public String getCreateAt(ODocument o){
-		Date tmp=o.field(FGrp.CREATE_AT);
-		if (tmp==null) {
+
+	public String getCreateAt(ODocument o) {
+		Date tmp = o.field(FGrp.CREATE_AT);
+		if (tmp == null) {
 			return "";
 		}
 		return App.dateTimeFormat.format(tmp);
 	}
-	
-	public String getUpdateAt(ODocument o){
-		Date tmp=o.field(FGrp.UPDATE_AT);
-		if (tmp==null) {
+
+	public String getUpdateAt(ODocument o) {
+		Date tmp = o.field(FGrp.UPDATE_AT);
+		if (tmp == null) {
 			return "";
 		}
 		return App.dateTimeFormat.format(tmp);
 	}
-	
-	public ODocument getCreateBy(ODocument o){
+
+	public ODocument getCreateBy(ODocument o) {
 		if (o.isLazyLoad()) {
 			return o.field(FGrp.CREATE_BY);
-		}else{
-			ORecordId id=o.field(FGrp.CREATE_BY);
-			if (id!=null) {
+		} else {
+			ORecordId id = o.field(FGrp.CREATE_BY);
+			if (id != null) {
 				ODatabaseDocumentTx db = App.getDbd();
 				ODatabaseRecordThreadLocal.INSTANCE.set(db);
-				ODocument tmp= getOneByRid(db, id.toString());
+				ODocument tmp = getOneByRid(db, id.toString());
 				db.close();
 				return tmp;
 			}
 			return null;
 		}
 	}
-	
-//	public String createByToString(ODocument o){
-//		ODocument tmp=getCreateBy(o);
-//		if (tmp==null) {
-//			return "";
-//		}
-//		return App.getUsrDao().getNama(tmp);
-//	}
-	
-	
-	
-	public ODocument getUpdateBy(ODocument o){
+
+	// public String createByToString(ODocument o){
+	// ODocument tmp=getCreateBy(o);
+	// if (tmp==null) {
+	// return "";
+	// }
+	// return App.getUsrDao().getNama(tmp);
+	// }
+
+	public ODocument getUpdateBy(ODocument o) {
 		if (o.isLazyLoad()) {
 			return o.field(FGrp.UPDATE_BY);
-		}else{
-			ORecordId id=o.field(FGrp.UPDATE_BY);
-			if (id!=null) {
+		} else {
+			ORecordId id = o.field(FGrp.UPDATE_BY);
+			if (id != null) {
 				ODatabaseDocumentTx db = App.getDbd();
 				ODatabaseRecordThreadLocal.INSTANCE.set(db);
-				ODocument tmp= getOneByRid(db, id.toString());
+				ODocument tmp = getOneByRid(db, id.toString());
 				db.close();
 				return tmp;
 			}
 			return null;
 		}
 	}
-	
-//	public String updateByToString(ODocument o){
-//		ODocument tmp=getUpdateBy(o);
-//		if (tmp==null) {
-//			return "";
-//		}
-//		return App.getUsrDao().getNama(tmp);
-//	}
-	
-	
-	public ODocument getCreateBy2(ODocument o){
-		String json=o.field(FGrp.CREATE_BY2);
-		if (json==null || json.equalsIgnoreCase("")) {
+
+	// public String updateByToString(ODocument o){
+	// ODocument tmp=getUpdateBy(o);
+	// if (tmp==null) {
+	// return "";
+	// }
+	// return App.getUsrDao().getNama(tmp);
+	// }
+
+	public ODocument getCreateBy2(ODocument o) {
+		String json = o.field(FGrp.CREATE_BY2);
+		if (json == null || json.equalsIgnoreCase("")) {
 			return null;
 		}
-		ODocument tmp=new ODocument(getClassName());
+		ODocument tmp = new ODocument(getClassName());
 		tmp.fromJSON(json);
 		return tmp;
 	}
-	
-	public ODocument getUpdateBy2(ODocument o){
-		String json=o.field(FGrp.UPDATE_BY2);
-		if (json==null || json.equalsIgnoreCase("")) {
+
+	public ODocument getUpdateBy2(ODocument o) {
+		String json = o.field(FGrp.UPDATE_BY2);
+		if (json == null || json.equalsIgnoreCase("")) {
 			return null;
 		}
-		ODocument tmp=new ODocument(getClassName());
+		ODocument tmp = new ODocument(getClassName());
 		tmp.fromJSON(json);
 		return tmp;
 	}
@@ -331,15 +328,16 @@ public class GrpDao extends DaoAbstract {
 	public void factoryModelFirst(ODatabaseDocumentTx db) {
 		if (getCount(db) == 0) {
 
-			ODocument usrDoc = App.getUsrDao().getOne(db, FUsr.USERNAME, "admin");
+			ODocument usrDoc = App.getUsrDao().getOne(db, FUsr.USERNAME,
+					"admin");
 			if (usrDoc == null) {
 				App.getUsrDao().factoryModelFirst(db);
 				usrDoc = App.getUsrDao().getOne(db, FUsr.USERNAME, "admin");
 			}
 
-			Usr usr=new Usr(usrDoc);
-			
-			Grp grp=new Grp();
+			Usr usr = new Usr(usrDoc);
+
+			Grp grp = new Grp();
 			grp.setName("Admin");
 			grp.setNote("Hak akses untuk Super User");
 			StringBuffer tmp = new StringBuffer();
@@ -347,15 +345,10 @@ public class GrpDao extends DaoAbstract {
 				tmp.append("x" + i + "x");
 			}
 			grp.setKey(tmp.toString());
-			
+
 			grp.setCreateAt(new Date());
 			grp.setCreateBy(usrDoc);
-			
-			List<Usr> usrs=new ArrayList<>();
-			usrs.add(usr);
 
-			grp.setUsrs(usrs);
-			
 
 			try {
 				db.begin(TXTYPE.OPTIMISTIC);
@@ -390,22 +383,17 @@ public class GrpDao extends DaoAbstract {
 	@Override
 	public ODocument update(ODatabaseDocumentTx db, ODocument model,
 			String jsonOld) {
-		
+
 		model.save();
 
-		
 		return model;
 	}
 
 	@Override
 	public ODocument save(ODatabaseDocumentTx db, ODocument model) {
 		super.save(db, model);
-		
+
 		return model;
 	}
-	
-	
-	
-	
 
 }

@@ -7,7 +7,8 @@ public class LGrp {
 	public static String CODE = App.getT("Kode");
 	public static String NAME = App.getT("Nama");
 	public static String NOTE = App.getT("Keterangan");
-	public static String USRS = "Pegawai";
+//	di field sini memang tidak ada, tpi di objek ada=>mengambil dari data usr
+//	public static String USRS = "Pegawai";
 	public static String CREATE_BY = "Created By";
 	public static String UPDATE_BY = "Updated By";
 	public static String CREATE_AT = "Created At";
