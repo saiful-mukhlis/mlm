@@ -1,4 +1,4 @@
-package com.basic.comp.impl.master;
+package com.basic.comp.impl.table.model;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;

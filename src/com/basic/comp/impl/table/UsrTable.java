@@ -5,7 +5,7 @@ import org.basic.comp.abst.TableAbs;
 import org.jdesktop.swingx.JXTable;
 import org.jdesktop.swingx.table.TableColumnExt;
 
-import com.basic.comp.impl.master.UsrTableModel;
+import com.basic.comp.impl.table.model.UsrTableModel;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 
 public class UsrTable extends TableAbs {

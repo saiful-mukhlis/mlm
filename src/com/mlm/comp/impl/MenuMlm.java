@@ -6,7 +6,9 @@ import javax.swing.JMenuItem;
 import org.basic.comp.abst.MenuAbs;
 
 import com.basic.comp.impl.master.GrpM;
+import com.basic.comp.impl.master.GrpMaster;
 import com.basic.comp.impl.master.JenisPekerjaanM;
+import com.basic.comp.impl.master.JenisPekerjaanMaster;
 import com.basic.comp.impl.master.UsrM;
 import com.basic.comp.impl.master.UsrMaster;
 import com.basic.lang.LMenu;
@@ -53,6 +55,8 @@ public class MenuMlm extends MenuAbs{
 		master.add(jenisPekerjaan);
 
 		usr.addActionListener(window.getMapMaster().get(UsrMaster.ID_MASTER).getAca());
+		grp.addActionListener(window.getMapMaster().get(GrpMaster.ID_MASTER).getAca());
+		jenisPekerjaan.addActionListener(window.getMapMaster().get(JenisPekerjaanMaster.ID_MASTER).getAca());
 
 		
 		menuBar.add(master);

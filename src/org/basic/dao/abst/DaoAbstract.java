@@ -17,6 +17,7 @@ import com.basic.db.FNumberId;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.db.record.ORecordLazyList;
+import com.orientechnologies.orient.core.db.record.ORecordLazySet;
 import com.orientechnologies.orient.core.iterator.ORecordIteratorClass;
 import com.orientechnologies.orient.core.metadata.schema.OType;
 import com.orientechnologies.orient.core.record.impl.ODocument;
@@ -700,12 +701,32 @@ public class DaoAbstract extends DaoAdapter {
 
 	@Override
 	public List<ODocument> getLinkList(ODatabaseDocumentTx db, String linklist) {
-		StringBuilder sql = new StringBuilder("select from ?");
+		StringBuilder sql = new StringBuilder("select from ");
+		sql.append(linklist);
 		OSQLSynchQuery<ODocument> query = new OSQLSynchQuery<ODocument>(
 				sql.toString());
-		List<ODocument> result = db.command(query).execute(linklist);
+		List<ODocument> result = db.command(query).execute();
 		return result;
 	}
+	@Override
+	public List<ODocument> getLinkList(ODatabaseDocumentTx db, ORecordLazyList linklist) {
+		StringBuilder sql = new StringBuilder("select from ");
+		sql.append(linklist);
+		OSQLSynchQuery<ODocument> query = new OSQLSynchQuery<ODocument>(
+				sql.toString());
+		List<ODocument> result = db.command(query).execute();
+		return result;
+	}
+	@Override
+	public List<ODocument> getLinkList(ODatabaseDocumentTx db, ORecordLazySet linklist) {
+		StringBuilder sql = new StringBuilder("select from ");
+		sql.append(linklist);
+		OSQLSynchQuery<ODocument> query = new OSQLSynchQuery<ODocument>(
+				sql.toString());
+		List<ODocument> result = db.command(query).execute();
+		return result;
+	}
+	
 
 	@Override
 	public HashSet<ODocument> getLinkSet(ODatabaseDocumentTx db,

@@ -115,7 +115,7 @@ public class App {
 		if (fontTitleToolbar==null) {
 			JLabel l=new JLabel();
 			Font f = l.getFont();
-			fontTitleToolbar = new Font(f.getName(), Font.BOLD, f.getSize() + 2);
+			fontTitleToolbar = new Font(f.getName(), Font.PLAIN, f.getSize() + 2);
 		}
 		return fontTitleToolbar;
 	}

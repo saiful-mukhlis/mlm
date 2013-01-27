@@ -5,8 +5,15 @@ import java.util.Date;
 import java.util.List;
 
 import com.basic.db.FGrp;
+import com.basic.db.FUsr;
+import com.global.App;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.db.record.OIdentifiable;
+import com.orientechnologies.orient.core.db.record.ORecordLazyList;
+import com.orientechnologies.orient.core.db.record.ORecordLazySet;
 import com.orientechnologies.orient.core.metadata.schema.OType;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import com.orientechnologies.orient.core.type.tree.OMVRBTreeRIDSet;
 
 public class Grp {
 	private String code;
@@ -151,6 +158,29 @@ public class Grp {
 	}
 
 	public List<Usr> getUsrs() {
+		if (usrs==null) {
+			//this.usrDocs=doc.field(FGrp.USRS);
+			ODatabaseDocumentTx db=App.getDbdLocal();
+			//App.getGrpDao().printAll(db);
+			OMVRBTreeRIDSet ids=doc.field(FGrp.USRS, OType.LINKSET);
+//			System.out.println(ids.toDocument());;
+			Object[] x=ids.toArray();
+			System.out.println(x[0]);
+			ids.remove(x[0]);
+			doc.save();
+			App.getUsrDao().printAll(db);
+			App.getGrpDao().printAll(db);
+			ids.add((OIdentifiable) x[0]);
+			doc.save();
+//			System.out.println();;
+//			System.out.println(doc.field(FGrp.USRS).getClass().toString());
+			this.usrDocs=App.getUsrDao().getAllByColumn(db, FUsr.GRP, getDoc().getIdentity());
+			db.close();
+			this.usrs=new ArrayList<>();
+			for (ODocument o : usrDocs) {
+				this.usrs.add(new Usr(o));
+			}
+		}
 		return usrs;
 	}
 

@@ -244,7 +244,9 @@ public class TableAbs implements ListWidget{
 		
 		ScrollPane ss=new ScrollPane(table);
 		panel.add(ss, BorderLayout.CENTER);
-		panel.add(tableModel.getPaging().getPanel(), BorderLayout.SOUTH);
+		if (tableModel.getPaging()!=null) {
+			panel.add(tableModel.getPaging().getPanel(), BorderLayout.SOUTH);
+		}
 		
 		setSimple();
 	}

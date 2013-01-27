@@ -5,6 +5,7 @@ import java.util.List;
 
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.db.record.ORecordLazyList;
+import com.orientechnologies.orient.core.db.record.ORecordLazySet;
 import com.orientechnologies.orient.core.record.impl.ODocument;
 
 public interface DaoInterface {
@@ -70,6 +71,8 @@ public interface DaoInterface {
 	public String getFormatCode();
 	public boolean isUseFormatCode();
 	public boolean isTrueChildThis(ODocument o);
+	List<ODocument> getLinkList(ODatabaseDocumentTx db, ORecordLazyList linklist);
+	List<ODocument> getLinkList(ODatabaseDocumentTx db, ORecordLazySet linklist);
 
 	
 }

@@ -1,6 +1,5 @@
 package com.basic.view.detail;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -12,14 +11,11 @@ import org.basic.comp.abst.FormBuilder;
 import org.basic.comp.base.ScrollPane;
 import org.basic.comp.base.TextArea;
 import org.basic.comp.base.TextField;
-import org.basic.comp.base.TextFieldAmount;
 import org.basic.comp.base.TreeHakAkses;
 
 import com.basic.entity.Grp;
-import com.basic.entity.JenisPekerjaan;
 import com.basic.entity.Usr;
 import com.basic.lang.LGrp;
-import com.basic.lang.LUsr;
 import com.basic.table.UsrTForGrp;
 import com.global.App;
 import com.jgoodies.forms.layout.FormLayout;
@@ -150,6 +146,9 @@ public class GrpDetail extends DetailAbs{
 //		splitPane.setBackground(Color.red);
 		builder.append(b.getPanel(), 2, 2);
 		builder.append(splitPane, 2, 4);
+		
+		panelForm=builder.getPanel();
+		scrollPane=new ScrollPane(panelForm); 
 		
 		super.build(db);
 		
