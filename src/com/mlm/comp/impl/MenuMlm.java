@@ -13,52 +13,35 @@ import org.basic.comp.abst.MenuAbs;
 
 import javax.swing.*;
 
-public class MenuMlm extends MenuAbs{
+public class MenuMlm extends MenuAbs {
 	protected JMenuItem pelanggan;
 	protected JMenuItem paket;
 	protected JMenu master;
-//	protected JMenuItem grp;
-//	protected JMenuItem usr;
-//	protected JMenuItem jenisPekerjaan;
+
 	@Override
 	public void init() {
 		super.init();
-		
-		pelanggan=new JMenuItem();
-		paket=new JMenuItem();
-		master=new JMenu();
-//		grp=new JMenuItem();
-//		usr=new JMenuItem();
-//		jenisPekerjaan=new JMenuItem();
-		
+
+		pelanggan = new JMenuItem();
+		paket = new JMenuItem();
+		master = new JMenu();
+
 	}
+
 	@Override
 	public void build(ODatabaseDocumentTx db) {
 		super.build(db);
-		
-		
+
 		createMenu(master, LWindow.master);
-//		createMenu(grp, LMenu.GRP, GrpMaster.ICON_16 );
-//		createMenu(usr, LMenu.USR, UsrMaster.ICON_16);
-//		createMenu(jenisPekerjaan, LMenu.JENIS_PEKERJAAN, JenisPekerjaanMaster.ICON_16);
-		
+
 		createMenu(pelanggan, LMenu.PELANGGAN, PelangganM.ICON_16);
 		createMenu(paket, LMenu.PAKET, PaketM.ICON_16);
-		
-		
+
 		master.add(App.getActions().get(GrpMaster.ID_MASTER));
 		master.add(App.getActions().get(UsrMaster.ID_MASTER));
 		master.add(App.getActions().get(JenisPekerjaanMaster.ID_MASTER));
 
-//		usr.addActionListener(App.getActions().get(UsrMaster.ID_MASTER));
-//		grp.addActionListener(App.getActions().get(GrpMaster.ID_MASTER));
-//		jenisPekerjaan.addActionListener(App.getActions().get(JenisPekerjaanMaster.ID_MASTER));
-
-		
 		menuBar.add(master);
 	}
-	
-	
-	
-	
+
 }
