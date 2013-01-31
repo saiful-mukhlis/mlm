@@ -1,15 +1,12 @@
 package org.basic.comp.base;
 
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSeparator;
-import javax.swing.SwingConstants;
-
 import com.basic.lang.LPanelButtom;
 import com.jgoodies.forms.factories.FormFactory;
 import com.jgoodies.forms.layout.ColumnSpec;
 import com.jgoodies.forms.layout.FormLayout;
 import com.jgoodies.forms.layout.RowSpec;
+
+import javax.swing.*;
 
 public class PanelBottom {
 	private JPanel panel;

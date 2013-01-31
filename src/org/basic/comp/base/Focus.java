@@ -1,9 +1,7 @@
 package org.basic.comp.base;
 
 
-import java.awt.Component;
-import java.awt.Container;
-import java.awt.FocusTraversalPolicy;
+import java.awt.*;
 import java.util.List;
 
 public class Focus extends FocusTraversalPolicy {

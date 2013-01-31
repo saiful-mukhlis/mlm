@@ -1,24 +1,12 @@
 package com.basic.print.interfaces;
 
-import java.awt.Window;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-
-import javax.swing.JFrame;
-
 import ar.com.fdvs.dj.domain.Style;
-import ar.com.fdvs.dj.domain.builders.DynamicReportBuilder;
-import ar.com.fdvs.dj.domain.constants.Page;
 import ar.com.fdvs.dj.domain.entities.columns.AbstractColumn;
-
-import com.basic.db.FGrp;
-import com.basic.db.FJenisPekerjaan;
-import com.basic.db.FUsr;
-import com.basic.print.model.UsrPM;
-import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.Collection;
 
 public interface PrintInterface {
 

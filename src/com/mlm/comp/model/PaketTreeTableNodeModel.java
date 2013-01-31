@@ -1,15 +1,12 @@
 package com.mlm.comp.model;
 
-import java.util.List;
-
-import org.basic.comp.model.DefaultTreeNodeModel;
-
 import com.basic.lang.LPaket;
 import com.global.App;
 import com.mlm.dao.impl.PaketDao;
-import com.mlm.db.FPelanggan;
-import com.mlm.db.FPp;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.model.DefaultTreeNodeModel;
+
+import java.util.List;
 
 public class PaketTreeTableNodeModel extends DefaultTreeNodeModel {
 

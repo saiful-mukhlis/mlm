@@ -1,11 +1,9 @@
 package org.basic.comp.adapter;
 
-import javax.swing.JPanel;
-
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.basic.comp.abst.WidgetPrivilege;
 
-
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import javax.swing.*;
 
 public interface ToolbarAdapter extends WidgetPrivilege{
 	public void build(ODatabaseDocumentTx db);

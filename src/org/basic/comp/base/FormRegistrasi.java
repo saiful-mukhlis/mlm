@@ -1,29 +1,6 @@
 package org.basic.comp.base;
 
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Font;
-import java.awt.SystemColor;
-import java.awt.Window;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.prefs.Preferences;
-
-import javax.swing.BorderFactory;
-import javax.swing.Icon;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSeparator;
-
-import org.basic.comp.abst.FormBuilder;
-
-
 import com.basic.db.FBos;
 import com.basic.lang.LApp;
 import com.basic.lang.LReg;
@@ -36,6 +13,15 @@ import com.jgoodies.forms.layout.FormLayout;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.abst.FormBuilder;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.prefs.Preferences;
 
 
 public class FormRegistrasi {

@@ -1,15 +1,13 @@
 package com.basic.print.adapter;
 
-import java.awt.Window;
-import java.util.Collection;
-
-import javax.swing.JFrame;
-
 import ar.com.fdvs.dj.domain.Style;
 import ar.com.fdvs.dj.domain.entities.columns.AbstractColumn;
-
 import com.basic.print.interfaces.PrintInterface;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.Collection;
 
 
 public class PrintAdapter implements PrintInterface{

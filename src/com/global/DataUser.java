@@ -1,9 +1,9 @@
 package com.global;
 
 
-import com.basic.comp.impl.master.GrpM;
-import com.basic.comp.impl.master.JenisPekerjaanM;
-import com.basic.comp.impl.master.UsrM;
+import com.basic.comp.impl.master.GrpMaster;
+import com.basic.comp.impl.master.JenisPekerjaanMaster;
+import com.basic.comp.impl.master.UsrMaster;
 import com.basic.db.FGrp;
 import com.mlm.comp.impl.master.PaketM;
 import com.mlm.comp.impl.master.PelangganM;
@@ -67,21 +67,21 @@ public class DataUser {
 	public static void setAkses(){
 		
 		ROOT=getAkses(XROOT);
-		GrpM.VIEW=getAkses(XHAK_AKSES_VIEW);
-		GrpM.ADD=getAkses(XHAK_AKSES_ADD);
-		GrpM.EDIT=getAkses(XHAK_AKSES_EDIT);
-		GrpM.DEL=getAkses(XHAK_AKSES_HAPUS);
+		GrpMaster.VIEW=getAkses(XHAK_AKSES_VIEW);
+		GrpMaster.ADD=getAkses(XHAK_AKSES_ADD);
+		GrpMaster.EDIT=getAkses(XHAK_AKSES_EDIT);
+		GrpMaster.DEL=getAkses(XHAK_AKSES_HAPUS);
 		
-		UsrM.VIEW=getAkses(XUSR_VIEW);
-		UsrM.EDIT=getAkses(XUSR_EDIT);
-		UsrM.ADD=getAkses(XUSR_ADD);
-		UsrM.DEL=getAkses(XUSR_DEL);
+		UsrMaster.VIEW=getAkses(XUSR_VIEW);
+		UsrMaster.EDIT=getAkses(XUSR_EDIT);
+		UsrMaster.ADD=getAkses(XUSR_ADD);
+		UsrMaster.DEL=getAkses(XUSR_DEL);
 		
 
-		JenisPekerjaanM.VIEW=getAkses(JENIS_VIEW);
-		JenisPekerjaanM.EDIT=getAkses(JENIS_PEKERJAAN_EDIT);
-		JenisPekerjaanM.ADD=getAkses(JENIS_PEKERJAAN_ADD);
-		JenisPekerjaanM.DEL=getAkses(JENIS_PEKERJAAN_DEL);
+		JenisPekerjaanMaster.VIEW=getAkses(JENIS_VIEW);
+		JenisPekerjaanMaster.EDIT=getAkses(JENIS_PEKERJAAN_EDIT);
+		JenisPekerjaanMaster.ADD=getAkses(JENIS_PEKERJAAN_ADD);
+		JenisPekerjaanMaster.DEL=getAkses(JENIS_PEKERJAAN_DEL);
 		
 		PaketM.VIEW=getAkses(PAKET_VIEW);
 		PaketM.EDIT=getAkses(PAKET_EDIT);

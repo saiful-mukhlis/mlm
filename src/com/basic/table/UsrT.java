@@ -1,10 +1,10 @@
 package com.basic.table;
 
+import com.basic.table.model.UsrTM;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.basic.comp.abst.TableDefault;
 import org.jdesktop.swingx.JXTable;
 import org.jdesktop.swingx.table.TableColumnExt;
-import com.basic.table.model.UsrTM;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 
 public class UsrT extends TableDefault{
 

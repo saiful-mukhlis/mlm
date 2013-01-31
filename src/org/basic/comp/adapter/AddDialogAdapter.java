@@ -1,17 +1,13 @@
 package org.basic.comp.adapter;
 
-import javax.swing.Icon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.record.impl.ODocument;
 import org.basic.comp.listener.AddDialogInterface;
 import org.basic.comp.listener.MasterInterface;
 import org.basic.comp.listener.WiddgetSyncInterface;
 import org.basic.dao.adapter.DaoInterface;
 
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
+import javax.swing.*;
 
 
 public class AddDialogAdapter implements AddDialogInterface{

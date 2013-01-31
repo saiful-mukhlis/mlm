@@ -1,21 +1,18 @@
 package com.mlm.tree;
 
-import java.awt.Color;
-import java.awt.Dialog.ModalityType;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.swing.JDialog;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPopupMenu;
-
+import com.basic.icon.IconBase;
+import com.basic.lang.LActions;
+import com.basic.lang.LDialog;
+import com.basic.lang.LPaket;
+import com.basic.lang.LWindow;
+import com.global.App;
+import com.mlm.comp.impl.master.PaketM;
+import com.mlm.comp.model.PaketTreeTableNodeModel;
+import com.mlm.db.FPaket;
+import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.record.impl.ODocument;
 import org.basic.comp.adapter.ListInterfaces;
-import org.basic.comp.adapter.TableInterfaces;
 import org.basic.comp.base.SplitButton;
 import org.basic.comp.base.TextFieldSearch;
 import org.jdesktop.swingx.JXTreeTable;
@@ -23,24 +20,12 @@ import org.jdesktop.swingx.table.TableColumnExt;
 import org.jdesktop.swingx.treetable.DefaultMutableTreeTableNode;
 import org.jdesktop.swingx.treetable.DefaultTreeTableModel;
 
-import com.basic.icon.IconBase;
-import com.basic.lang.LActions;
-import com.basic.lang.LDialog;
-import com.basic.lang.LPaket;
-import com.basic.lang.LPelanggan;
-import com.basic.lang.LWindow;
-import com.global.App;
-import com.mlm.comp.impl.master.PaketM;
-import com.mlm.comp.model.PaketTreeTableNodeModel;
-import com.mlm.comp.model.PelangganTreeTableNodeModel;
-import com.mlm.db.FPaket;
-import com.mlm.db.FPelanggan;
-import com.mlm.db.FPp;
-import com.mlm.view.add.PelangganDAddDownline;
-import com.mlm.view.add.PelangganDAddPaket;
-import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 
 public class PaketTree extends TreeTableDefault{

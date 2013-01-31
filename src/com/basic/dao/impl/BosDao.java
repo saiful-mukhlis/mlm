@@ -1,20 +1,15 @@
 package com.basic.dao.impl;
 
 
-import java.util.Random;
-import java.util.prefs.Preferences;
-
-import javax.swing.JOptionPane;
-
-import org.basic.dao.abst.DaoAbstract;
-
 import com.basic.db.FBos;
 import com.basic.entity.Bos;
-import com.global.App;
 import com.global.util.Err;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.metadata.schema.OType;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.dao.abst.DaoAbstract;
+
+import java.util.Random;
+import java.util.prefs.Preferences;
 
 public class BosDao extends DaoAbstract {
 

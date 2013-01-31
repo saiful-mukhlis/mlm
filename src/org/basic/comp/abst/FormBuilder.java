@@ -1,17 +1,13 @@
 package org.basic.comp.abst;
 
 
-import java.awt.Component;
-import java.awt.Font;
-
-import javax.swing.JButton;
-import javax.swing.JLabel;
-
 import com.global.App;
 import com.jgoodies.forms.builder.PanelBuilder;
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class FormBuilder extends PanelBuilder{
 

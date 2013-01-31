@@ -1,11 +1,9 @@
 package com.mlm.comp.model;
 
-import org.basic.comp.listener.ODocumentToStringNodeInterface;
-import org.jdesktop.swingx.treetable.MutableTreeTableNode;
-import org.jdesktop.swingx.treetable.TreeTableNode;
-
 import com.global.App;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.listener.ODocumentToStringNodeInterface;
+import org.jdesktop.swingx.treetable.MutableTreeTableNode;
 
 public class PaketToStringNode implements ODocumentToStringNodeInterface{
 

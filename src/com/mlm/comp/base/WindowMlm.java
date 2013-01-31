@@ -1,16 +1,5 @@
 package com.mlm.comp.base;
 
-import java.awt.FlowLayout;
-import java.util.List;
-
-import javax.swing.JPanel;
-
-import org.basic.comp.base.ImagePanel;
-import org.basic.comp.base.Komponent;
-import org.basic.comp.base.Menu;
-import org.basic.comp.base.Window;
-import org.noos.xing.yasaf.plaf.action.ViewContextAction;
-
 import com.basic.comp.impl.master.GrpM;
 import com.basic.comp.impl.master.JenisPekerjaanM;
 import com.basic.comp.impl.master.UsrM;
@@ -20,6 +9,12 @@ import com.global.App;
 import com.mlm.comp.impl.master.PaketM;
 import com.mlm.comp.impl.master.PelangganM;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.base.ImagePanel;
+import org.basic.comp.base.Window;
+import org.noos.xing.yasaf.plaf.action.ViewContextAction;
+
+import javax.swing.*;
+import java.awt.*;
 
 
 public class WindowMlm extends Window{

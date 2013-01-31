@@ -1,16 +1,13 @@
 package org.basic.comp.abst;
 
-import java.util.HashMap;
-import java.util.List;
-
-import javax.swing.JFrame;
-import javax.swing.JProgressBar;
-
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.basic.comp.base.PanelBottom;
 import org.noos.xing.mydoggy.ToolWindowManager;
 import org.noos.xing.yasaf.view.ViewContext;
 
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import javax.swing.*;
+import java.util.HashMap;
+import java.util.List;
 
 public interface Window {
 

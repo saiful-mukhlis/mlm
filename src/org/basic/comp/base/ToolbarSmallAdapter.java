@@ -1,20 +1,14 @@
 package org.basic.comp.base;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.util.List;
-
-import javax.swing.JPanel;
-import javax.swing.JToolBar;
-
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.record.impl.ODocument;
 import org.basic.comp.abst.WidgetPrivilege;
 import org.basic.comp.adapter.WindowInterfaces;
 import org.basic.comp.listener.MasterInterface;
 import org.basic.comp.listener.ToolbarSmallInterface;
-import org.basic.comp.listener.WidgetInterface;
 
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
+import javax.swing.*;
+import java.awt.*;
 
 public class ToolbarSmallAdapter extends JToolBar implements ToolbarSmallInterface, WidgetPrivilege {
 	public MasterInterface master;

@@ -1,11 +1,5 @@
 package com.mlm.comp.base;
 
-import javax.swing.Icon;
-
-import org.basic.comp.adapter.WindowInterfaces;
-import org.basic.comp.base.Komponent;
-import org.basic.comp.base.Window;
-
 import com.basic.comp.impl.master.GrpM;
 import com.basic.comp.impl.master.JenisPekerjaanM;
 import com.basic.comp.impl.master.UsrM;
@@ -14,6 +8,11 @@ import com.mlm.comp.impl.master.PaketM;
 import com.mlm.comp.impl.master.PelangganM;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.adapter.WindowInterfaces;
+import org.basic.comp.base.Komponent;
+import org.basic.comp.base.Window;
+
+import javax.swing.*;
 
 
 public class KomponentMlm extends Komponent{

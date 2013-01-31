@@ -1,11 +1,9 @@
 package org.basic.comp.abst;
 
-import javax.swing.Icon;
-import javax.swing.JPanel;
-
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.noos.xing.yasaf.plaf.action.ViewContextAction;
 
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import javax.swing.*;
 
 public interface Master {
 
@@ -92,6 +90,12 @@ public interface Master {
 	boolean isExcel();
 
 	String getTitle();
+	
+	String getTitleAction();
+	
+	String getDescAction();
+	
+	KeyStroke getKeyStroke();
 
 	String getUrlIcon();
 
@@ -101,9 +105,9 @@ public interface Master {
 
 	String getTitleToolBar();
 	
-	AddContentAction getAca();
+//	AddContentAction getAca();
 	
-	ViewContextAction getVca();
+//	ViewContextAction getVca();
 
 	String getIdMaster();
 

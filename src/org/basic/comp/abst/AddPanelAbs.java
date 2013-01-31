@@ -1,28 +1,19 @@
 package org.basic.comp.abst;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Window;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.swing.Icon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSeparator;
-
-import org.basic.comp.base.GradientPanel;
-import org.basic.comp.base.ScrollPane;
-
 import com.basic.lang.LApp;
 import com.global.App;
 import com.jgoodies.forms.layout.FormLayout;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.base.GradientPanel;
+import org.basic.comp.base.ScrollPane;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AddPanelAbs implements AddPanel {
 	protected JPanel panel;
@@ -226,8 +217,8 @@ public class AddPanelAbs implements AddPanel {
 	}
 
 	public void dispose(Object o) {
-		if (o instanceof Window) {
-			((Window) o).dispose();
+		if (o instanceof java.awt.Window) {
+			((java.awt.Window) o).dispose();
 		} else {
 			if (o instanceof Component) {
 				dispose(((Component) o).getParent());

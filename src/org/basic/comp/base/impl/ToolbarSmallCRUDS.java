@@ -1,24 +1,5 @@
 package org.basic.comp.base.impl;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
-import javax.swing.JToolBar;
-import javax.swing.SwingConstants;
-
-import org.basic.comp.abst.FactorySearch;
-import org.basic.comp.abst.Master;
-import org.basic.comp.abst.ToolbarSmall;
-import org.basic.comp.base.SplitButton;
-import org.basic.comp.base.TextFieldSearch;
-
 import com.basic.icon.IconBase;
 import com.basic.lang.LActions;
 import com.basic.lang.LWindow;
@@ -26,6 +7,16 @@ import com.global.App;
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.abst.FactorySearch;
+import org.basic.comp.abst.Master;
+import org.basic.comp.abst.ToolbarSmall;
+import org.basic.comp.base.SplitButton;
+import org.basic.comp.base.TextFieldSearch;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ToolbarSmallCRUDS implements ToolbarSmall {
 	protected JPanel panel;

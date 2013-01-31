@@ -1,12 +1,12 @@
 package org.basic.dao.adapter;
 
-import java.util.HashSet;
-import java.util.List;
-
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.db.record.ORecordLazyList;
 import com.orientechnologies.orient.core.db.record.ORecordLazySet;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+
+import java.util.HashSet;
+import java.util.List;
 
 public interface DaoInterface {
 	public ODocument save(ODatabaseDocumentTx db, ODocument model);

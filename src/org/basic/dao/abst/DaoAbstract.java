@@ -1,18 +1,5 @@
 package org.basic.dao.abst;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.List;
-
-import javax.swing.JComboBox;
-import javax.swing.JPasswordField;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-
-import org.basic.comp.model.ODocumentToString;
-import org.basic.dao.adapter.DaoAdapter;
-import org.basic.dao.adapter.DaoInterface;
-
 import com.basic.db.FNumberId;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
@@ -24,6 +11,14 @@ import com.orientechnologies.orient.core.record.impl.ODocument;
 import com.orientechnologies.orient.core.sql.OCommandSQL;
 import com.orientechnologies.orient.core.sql.query.OSQLSynchQuery;
 import com.orientechnologies.orient.core.tx.OTransaction.TXTYPE;
+import org.basic.comp.model.ODocumentToString;
+import org.basic.dao.adapter.DaoAdapter;
+import org.basic.dao.adapter.DaoInterface;
+
+import javax.swing.*;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
 
 public class DaoAbstract extends DaoAdapter {
 	public String className;

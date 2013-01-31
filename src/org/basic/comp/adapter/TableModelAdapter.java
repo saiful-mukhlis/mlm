@@ -1,19 +1,14 @@
 package org.basic.comp.adapter;
 
 
-import java.util.List;
-
-import javax.swing.JTable;
-import javax.swing.event.TableModelListener;
-import javax.swing.table.AbstractTableModel;
-
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.record.impl.ODocument;
 import org.basic.comp.base.SplitButton;
 import org.basic.comp.base.TextFieldSearch;
 import org.basic.dao.adapter.DaoInterface;
 
-
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
+import javax.swing.table.AbstractTableModel;
+import java.util.List;
 
 public class TableModelAdapter extends AbstractTableModel implements TableModelInterface, ParentPagingInterface {
 

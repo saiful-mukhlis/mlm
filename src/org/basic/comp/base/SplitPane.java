@@ -1,6 +1,7 @@
 package org.basic.comp.base;
-import java.awt.Component;
-import javax.swing.JSplitPane;
+
+import javax.swing.*;
+import java.awt.*;
 public class SplitPane extends JSplitPane {
 
 	public SplitPane(int newOrientation, Component newLeftComponent,

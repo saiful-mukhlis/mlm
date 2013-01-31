@@ -1,36 +1,20 @@
 package org.basic.comp.abst;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.swing.BorderFactory;
-import javax.swing.JLabel;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
-import javax.swing.JScrollPane;
-import javax.swing.ListSelectionModel;
-
-import org.basic.comp.base.ScrollPane;
-import org.jdesktop.swingx.JXTable;
-import org.jdesktop.swingx.decorator.HighlighterFactory;
-
-import com.basic.entity.Usr;
 import com.basic.icon.IconBase;
 import com.basic.lang.LActions;
 import com.basic.lang.LDialog;
 import com.basic.lang.LWindow;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.base.ScrollPane;
+import org.jdesktop.swingx.JXTable;
+import org.jdesktop.swingx.decorator.HighlighterFactory;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TableAbs implements ListWidget{
 	protected JPanel panel;

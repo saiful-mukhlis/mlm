@@ -1,11 +1,5 @@
 package com.mlm.view.def;
 
-import org.basic.comp.abst.DetailAbstract;
-import org.basic.comp.abst.FormBuilder;
-import org.basic.comp.base.ScrollPane;
-import org.basic.comp.base.TextArea;
-import org.basic.comp.base.TextField;
-
 import com.basic.lang.LPelanggan;
 import com.global.App;
 import com.jgoodies.forms.layout.FormLayout;
@@ -14,6 +8,11 @@ import com.mlm.db.FPelanggan;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.abst.DetailAbstract;
+import org.basic.comp.abst.FormBuilder;
+import org.basic.comp.base.ScrollPane;
+import org.basic.comp.base.TextArea;
+import org.basic.comp.base.TextField;
 
 public class PelangganC extends DetailAbstract {
 

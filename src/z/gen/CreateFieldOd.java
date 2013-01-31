@@ -1,12 +1,11 @@
 package z.gen;
 
-import java.lang.reflect.Field;
-
 import com.basic.annotation.db.Type;
-import com.basic.db.FUsr;
 import com.global.App;
 import com.google.common.base.CaseFormat;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+
+import java.lang.reflect.Field;
 
 public class CreateFieldOd {
 

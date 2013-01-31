@@ -1,9 +1,9 @@
 package org.basic.comp.abst;
 
-import org.basic.comp.listener.EditDialogInterface;
-import org.basic.comp.listener.MasterInterface;
 import com.basic.lang.LWindow;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.listener.EditDialogInterface;
+import org.basic.comp.listener.MasterInterface;
 
 public  class DialogEditDefault extends DialogDefault implements EditDialogInterface {
 

@@ -1,9 +1,5 @@
 package com.mlm.comp.model;
 
-import org.basic.comp.model.HakAksesTreeModel;
-import org.basic.comp.model.HakAksesTreeModel;
-
-import com.global.DataUser;
 import com.orientechnologies.orient.core.record.impl.ODocument;
 
 public class HakAksesModelMlm extends HakAksesModel {

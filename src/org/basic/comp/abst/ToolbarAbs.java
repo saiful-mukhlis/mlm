@@ -1,8 +1,8 @@
 package org.basic.comp.abst;
 
-import javax.swing.JPanel;
-
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+
+import javax.swing.*;
 
 public class ToolbarAbs implements Toolbar {
 	protected JPanel panel;

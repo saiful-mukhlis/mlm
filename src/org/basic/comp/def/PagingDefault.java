@@ -1,21 +1,13 @@
 package org.basic.comp.def;
 
-import java.awt.BorderLayout;
-
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
-import org.basic.comp.abst.PagingAbstract;
-import org.basic.comp.adapter.ParentPagingInterface;
-import org.basic.comp.adapter.TableModelInterface;
-
 import com.basic.icon.IconBase;
 import com.jgoodies.forms.builder.DefaultFormBuilder;
 import com.jgoodies.forms.layout.FormLayout;
+import org.basic.comp.abst.PagingAbstract;
+import org.basic.comp.adapter.ParentPagingInterface;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class PagingDefault extends PagingAbstract{
 	@Override

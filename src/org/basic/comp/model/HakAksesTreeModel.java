@@ -1,13 +1,13 @@
 package org.basic.comp.model;
 
 
-import org.jdesktop.swingx.treetable.DefaultMutableTreeTableNode;
-import org.jdesktop.swingx.treetable.TreeTableNode;
 import com.basic.db.FGrp;
 import com.global.App;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.jdesktop.swingx.treetable.DefaultMutableTreeTableNode;
+import org.jdesktop.swingx.treetable.TreeTableNode;
 
 public class HakAksesTreeModel extends DefaultMutableTreeTableNode {
 

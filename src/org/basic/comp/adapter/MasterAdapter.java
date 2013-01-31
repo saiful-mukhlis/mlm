@@ -1,15 +1,12 @@
 package org.basic.comp.adapter;
 
-import javax.swing.Icon;
-import javax.swing.JPanel;
-
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.record.impl.ODocument;
 import org.basic.comp.abst.WidgetPrivilege;
 import org.basic.comp.listener.MasterInterface;
 import org.basic.comp.listener.WiddgetSyncInterface;
 
-import com.global.App;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
+import javax.swing.*;
 
 
 public class MasterAdapter implements MasterInterface, WidgetPrivilege, EfectWidget{

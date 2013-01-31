@@ -1,16 +1,14 @@
 package org.basic.comp.abst;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.record.impl.ODocument;
 import org.basic.comp.adapter.PagingInterface;
 import org.basic.comp.adapter.TableInterfaces;
 import org.basic.comp.adapter.TableModelAdapter;
 import org.basic.dao.adapter.DaoInterface;
 
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TableModelDefault extends TableModelAdapter {
 

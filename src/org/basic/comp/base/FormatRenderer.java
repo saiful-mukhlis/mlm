@@ -1,9 +1,9 @@
 package org.basic.comp.base;
 
 
-import java.text.Format;
-import java.text.DateFormat;
 import javax.swing.table.DefaultTableCellRenderer;
+import java.text.DateFormat;
+import java.text.Format;
 
 /*
  *	Use a formatter to format the cell Object

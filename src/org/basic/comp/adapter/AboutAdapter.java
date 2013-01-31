@@ -1,8 +1,5 @@
 package org.basic.comp.adapter;
 
-import javax.swing.JLabel;
-
-import com.global.App;
 import com.jgoodies.forms.builder.DefaultFormBuilder;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 

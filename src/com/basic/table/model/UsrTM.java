@@ -1,22 +1,5 @@
 package com.basic.table.model;
 
-import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import javax.swing.JMenuItem;
-import javax.swing.JPopupMenu;
-import javax.swing.JTable;
-import javax.swing.table.TableColumnModel;
-
-import org.basic.comp.abst.TableModelDefault;
-import org.basic.comp.base.SplitButton;
-import org.basic.comp.base.TextFieldSearch;
-
-import com.basic.dao.impl.GrpDao;
 import com.basic.dao.impl.UsrDao;
 import com.basic.db.FGrp;
 import com.basic.db.FJenisPekerjaan;
@@ -27,6 +10,15 @@ import com.global.App;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.abst.TableModelDefault;
+import org.basic.comp.base.SplitButton;
+import org.basic.comp.base.TextFieldSearch;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.List;
 
 public class UsrTM extends TableModelDefault {
 

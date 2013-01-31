@@ -1,9 +1,9 @@
 package org.basic.comp.listener;
 
-import javax.swing.Icon;
+import com.orientechnologies.orient.core.record.impl.ODocument;
 import org.basic.comp.adapter.WindowInterfaces;
 
-import com.orientechnologies.orient.core.record.impl.ODocument;
+import javax.swing.*;
 
 public interface MasterInterface extends WidgetInterface {
 	public void actionAdd();

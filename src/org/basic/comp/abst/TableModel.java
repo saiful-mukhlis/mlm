@@ -1,11 +1,9 @@
 package org.basic.comp.abst;
 
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+
 import java.util.HashMap;
 import java.util.List;
-
-import org.basic.dao.adapter.DaoInterface;
-
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 
 public interface TableModel extends javax.swing.table.TableModel{
 	void editModel(Object model, int index);

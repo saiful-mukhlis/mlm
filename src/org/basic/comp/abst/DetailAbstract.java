@@ -1,45 +1,23 @@
 package org.basic.comp.abst;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import com.global.App;
+import com.jgoodies.forms.layout.FormLayout;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.adapter.DetailAdapter;
+import org.basic.comp.adapter.EfectWidget;
+import org.basic.comp.listener.WidgetInterface;
+import org.basic.dao.adapter.DaoInterface;
+
+import javax.swing.*;
+import javax.swing.text.JTextComponent;
+import java.awt.*;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-
-import javax.swing.BorderFactory;
-import javax.swing.Icon;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JComponent;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JScrollPane;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-import javax.swing.text.JTextComponent;
-
-import org.basic.comp.adapter.DetailAdapter;
-import org.basic.comp.adapter.DetailWidgetInterface;
-import org.basic.comp.adapter.EfectWidget;
-import org.basic.comp.listener.WidgetInterface;
-import org.basic.comp.model.ODocumentToString;
-import org.basic.dao.adapter.DaoInterface;
-
-import com.basic.lang.LApp;
-import com.global.App;
-import com.jgoodies.forms.layout.FormLayout;
-import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
 
 public abstract class DetailAbstract extends DetailAdapter{
 	

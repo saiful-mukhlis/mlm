@@ -1,10 +1,6 @@
 package com.mlm.managedb;
 
-import com.basic.db.FBos;
-import com.basic.db.FGrp;
-import com.basic.db.FJenisPekerjaan;
-import com.basic.db.FNumberId;
-import com.basic.db.FUsr;
+import com.basic.db.*;
 import com.global.App;
 import com.mlm.db.FPaket;
 import com.mlm.db.FPelanggan;

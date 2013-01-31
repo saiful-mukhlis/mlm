@@ -1,8 +1,8 @@
 package org.basic.comp.abst;
 
-import javax.swing.JMenuBar;
-
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+
+import javax.swing.*;
 
 public interface Menu {
 

@@ -1,36 +1,20 @@
 package com.basic.dao.impl;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.text.DecimalFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import org.basic.comp.base.DatePicker;
-import org.basic.comp.base.PasswordField;
-import org.basic.comp.base.TextArea;
-import org.basic.comp.base.TextField;
-import org.basic.comp.base.TextFieldAmount;
-import org.basic.comp.model.ODocumentToString;
-import org.basic.dao.abst.DaoAbstract;
-
 import com.basic.db.FGrp;
 import com.basic.db.FJenisPekerjaan;
 import com.basic.db.FUsr;
 import com.basic.entity.Grp;
 import com.basic.entity.JenisPekerjaan;
 import com.basic.entity.Usr;
-import com.basic.lang.LUsr;
 import com.global.App;
-import com.global.util.Account;
-import com.google.common.base.CharMatcher;
-import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.id.ORecordId;
 import com.orientechnologies.orient.core.metadata.schema.OType;
 import com.orientechnologies.orient.core.record.impl.ODocument;
-import com.orientechnologies.orient.core.sql.query.OSQLSynchQuery;
+import org.basic.dao.abst.DaoAbstract;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  * @author toyib

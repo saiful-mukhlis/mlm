@@ -1,38 +1,22 @@
 package org.basic.comp.base;
 
-import java.awt.BorderLayout;
-import java.awt.CardLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Insets;
-import java.awt.Toolkit;
+import com.basic.comp.impl.master.GrpM;
+import com.basic.comp.impl.master.UsrM;
+import com.basic.lang.LApp;
+import com.global.App;
+import com.global.DataUser;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.adapter.ToolbarAdapter;
+import org.basic.comp.adapter.WindowInterfaces;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.swing.BorderFactory;
-import javax.swing.Icon;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JPanel;
-import javax.swing.JSeparator;
-import javax.swing.JTabbedPane;
-import javax.swing.JToolBar;
-import javax.swing.SwingConstants;
-
-import org.basic.comp.adapter.ToolbarAdapter;
-import org.basic.comp.adapter.WindowInterfaces;
-
-import com.basic.comp.impl.master.GrpM;
-import com.basic.comp.impl.master.UsrM;
-import com.basic.db.FGrp;
-import com.basic.lang.LApp;
-import com.global.App;
-import com.global.DataUser;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 
 public class Toolbar implements ToolbarAdapter{
 	protected JToolBar toolBar1;

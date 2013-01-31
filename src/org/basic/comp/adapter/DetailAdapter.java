@@ -1,13 +1,9 @@
 package org.basic.comp.adapter;
 
-import java.util.List;
-
-import javax.swing.JPanel;
-
-import org.basic.comp.listener.WidgetInterface;
-
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+
+import javax.swing.*;
 
 
 public class DetailAdapter implements DetailWidgetInterface{

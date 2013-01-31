@@ -1,18 +1,16 @@
 package org.basic.comp.adapter;
 
-import java.awt.Component;
-import java.util.HashMap;
-import java.util.List;
-
-import javax.swing.JPanel;
-
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.record.impl.ODocument;
 import org.basic.comp.base.Komponent;
 import org.basic.comp.base.PanelBottom;
 import org.noos.xing.mydoggy.ToolWindowManager;
 import org.noos.xing.mydoggy.mydoggyset.action.AddContentAction;
 
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
+import javax.swing.*;
+import java.awt.*;
+import java.util.HashMap;
+import java.util.List;
 
 public class WindowAdapter implements WindowInterfaces{
 

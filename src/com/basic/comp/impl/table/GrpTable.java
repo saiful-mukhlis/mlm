@@ -1,12 +1,11 @@
 package com.basic.comp.impl.table;
 
+import com.basic.comp.impl.table.model.GrpTableModel;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.basic.comp.abst.PagingAbs;
 import org.basic.comp.abst.TableAbs;
 import org.jdesktop.swingx.JXTable;
 import org.jdesktop.swingx.table.TableColumnExt;
-
-import com.basic.comp.impl.table.model.GrpTableModel;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 
 public class GrpTable extends TableAbs {
 

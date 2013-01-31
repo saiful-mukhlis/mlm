@@ -1,15 +1,6 @@
 package com.mlm.view.def;
 
 
-
-import org.basic.comp.abst.DetailAbstract;
-import org.basic.comp.abst.FormBuilder;
-import org.basic.comp.base.ScrollPane;
-import org.basic.comp.base.TextArea;
-import org.basic.comp.base.TextField;
-import org.basic.comp.base.TextFieldAmount;
-
-import com.basic.db.FGrp;
 import com.basic.lang.LPaket;
 import com.global.App;
 import com.jgoodies.forms.layout.FormLayout;
@@ -17,6 +8,12 @@ import com.mlm.dao.impl.PaketDao;
 import com.mlm.db.FPaket;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.abst.DetailAbstract;
+import org.basic.comp.abst.FormBuilder;
+import org.basic.comp.base.ScrollPane;
+import org.basic.comp.base.TextArea;
+import org.basic.comp.base.TextField;
+import org.basic.comp.base.TextFieldAmount;
 
 public class PaketC extends DetailAbstract {
 

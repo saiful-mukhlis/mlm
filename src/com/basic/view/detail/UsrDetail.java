@@ -1,15 +1,5 @@
 package com.basic.view.detail;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
-import org.basic.comp.abst.DetailAbs;
-import org.basic.comp.abst.FormBuilder;
-import org.basic.comp.base.ScrollPane;
-import org.basic.comp.base.TextArea;
-import org.basic.comp.base.TextField;
-import org.basic.comp.base.TextFieldAmount;
-
 import com.basic.entity.Grp;
 import com.basic.entity.JenisPekerjaan;
 import com.basic.entity.Usr;
@@ -17,6 +7,15 @@ import com.basic.lang.LUsr;
 import com.global.App;
 import com.jgoodies.forms.layout.FormLayout;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.abst.DetailAbs;
+import org.basic.comp.abst.FormBuilder;
+import org.basic.comp.base.ScrollPane;
+import org.basic.comp.base.TextArea;
+import org.basic.comp.base.TextField;
+import org.basic.comp.base.TextFieldAmount;
+
+import java.math.BigDecimal;
+import java.util.Date;
 
 public class UsrDetail extends DetailAbs{
 	protected TextField code;

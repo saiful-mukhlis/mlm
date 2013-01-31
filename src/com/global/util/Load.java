@@ -1,13 +1,12 @@
 package com.global.util;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.record.impl.ODocument;
 import org.basic.comp.abst.Paging;
 import org.basic.dao.adapter.DaoInterface;
 
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Load {
 	// modelDocs tidak boleh null

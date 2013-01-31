@@ -1,21 +1,12 @@
 package org.basic.comp.base;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.math.BigDecimal;
-
-import javax.swing.JTextField;
-import javax.swing.SwingConstants;
-import javax.swing.UIManager;
-
 import com.global.App;
 import com.google.common.base.CharMatcher;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.math.BigDecimal;
 
 public class TextFieldAmount extends JTextField {
 

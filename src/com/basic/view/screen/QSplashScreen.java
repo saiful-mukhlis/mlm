@@ -1,16 +1,7 @@
 package com.basic.view.screen;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.SystemColor;
-import java.awt.Toolkit;
-
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.JWindow;
-import javax.swing.ImageIcon;
+import javax.swing.*;
+import java.awt.*;
 public class QSplashScreen extends JWindow  {
 	protected JProgressBar bar ;
 	protected int width;

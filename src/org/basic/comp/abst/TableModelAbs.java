@@ -1,16 +1,15 @@
 package org.basic.comp.abst;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
-import org.basic.comp.adapter.TableModelAdapter;
-import org.basic.dao.adapter.DaoInterface;
-
 import com.global.App;
 import com.global.util.Load;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.adapter.TableModelAdapter;
+import org.basic.dao.adapter.DaoInterface;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class TableModelAbs extends TableModelAdapter implements TableModel {
 	protected String[] nameColumn;

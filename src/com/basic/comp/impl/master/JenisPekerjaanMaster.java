@@ -1,16 +1,15 @@
 package com.basic.comp.impl.master;
 
-import javax.swing.Icon;
-
-import org.basic.comp.abst.MasterAbs;
-import org.basic.comp.abst.WidgetChangeObj;
-import org.basic.comp.base.impl.ToolbarSmallCRUDS;
-
 import com.basic.comp.impl.table.JenisPekerjaanTable;
 import com.basic.view.add.JenisPekerjaanDN;
 import com.basic.view.detail.JenisPekerjaanDetail;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.abst.MasterAbs;
+import org.basic.comp.abst.WidgetChangeObj;
+import org.basic.comp.base.impl.ToolbarSmallCRUDS;
+
+import javax.swing.*;
 
 public class JenisPekerjaanMaster extends MasterAbs {
 	public static String TITLE_ADD = App.getT("Tambah Data Jenis Pekerjaan");
@@ -19,8 +18,11 @@ public class JenisPekerjaanMaster extends MasterAbs {
 	public static String MNEMONIC = App.getT("P");
 	public static String ID_MASTER = "Jenis Pekerjaan";
 	public static String TITLE = App.getT("Master Data Jenis Pekerjaan");
-	public static String TITLE_MENU = App.getT("Jenis Pekerjaan");
-	public static String TITLE_TOOLBAR = TITLE_MENU;
+	
+	public static String KEY_STROKE_ACTION = App.getT("ctrl J");
+	public static String TITLE_ACTION = App.getT("Jenis Pekerjaan");
+	public static String DESC_ACTION = TITLE_ACTION;
+	
 	public static String URL_ICON_16 = "/image/pegawai-16.png";
 	public static String URL_ICON_32 = "/image/pegawai-32.png";
 	public static String URL_ICON_48 = "/image/pegawai-48.png";
@@ -80,8 +82,19 @@ public class JenisPekerjaanMaster extends MasterAbs {
 		return TITLE.toUpperCase();
 	}
 
-	public String getTitleMenu() {
-		return TITLE_MENU;
+	@Override
+	public String getTitleAction() {
+		return TITLE_ACTION;
+	}
+
+	@Override
+	public String getDescAction() {
+		return DESC_ACTION;
+	}
+	
+	@Override
+	public KeyStroke getKeyStroke() {
+		return KeyStroke.getKeyStroke(KEY_STROKE_ACTION);
 	}
 
 	public String getIdMaster() {

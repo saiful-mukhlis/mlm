@@ -1,12 +1,9 @@
 package org.basic.comp.adapter;
 
-import javax.swing.JMenuBar;
-
 import org.basic.comp.listener.MasterInterface;
 import org.basic.comp.listener.WidgetInterface;
 
-
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import javax.swing.*;
 
 public interface MenuInterface extends WidgetInterface{
 	public JMenuBar getMenu();

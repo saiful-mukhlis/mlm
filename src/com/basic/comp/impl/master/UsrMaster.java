@@ -1,16 +1,15 @@
 package com.basic.comp.impl.master;
 
-import javax.swing.Icon;
-
-import org.basic.comp.abst.MasterAbs;
-import org.basic.comp.abst.WidgetChangeObj;
-import org.basic.comp.base.impl.ToolbarSmallCRUDS;
-
 import com.basic.comp.impl.table.UsrTable;
 import com.basic.view.add.UsrDN;
 import com.basic.view.detail.UsrDetail;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.abst.MasterAbs;
+import org.basic.comp.abst.WidgetChangeObj;
+import org.basic.comp.base.impl.ToolbarSmallCRUDS;
+
+import javax.swing.*;
 
 public class UsrMaster extends MasterAbs {
 	public static String TITLE_ADD = App.getT("Tambah Data Pegawai");
@@ -19,8 +18,9 @@ public class UsrMaster extends MasterAbs {
 	public static String MNEMONIC = App.getT("P");
 	public static String ID_MASTER = "Pegawai";
 	public static String TITLE = App.getT("Master Data Pegawai");
-	public static String TITLE_MENU = App.getT("Pegawai");
-	public static String TITLE_TOOLBAR = TITLE_MENU;
+	public static String KEY_STROKE_ACTION = App.getT("ctrl P");
+	public static String TITLE_ACTION = App.getT("Pegawai");
+	public static String DESC_ACTION = TITLE_ACTION;
 	public static String URL_ICON_16 = "/image/pegawai-16.png";
 	public static String URL_ICON_32 = "/image/pegawai-32.png";
 	public static String URL_ICON_48 = "/image/pegawai-48.png";
@@ -85,7 +85,7 @@ public class UsrMaster extends MasterAbs {
 	}
 	
 	public String getTitleMenu() {
-		return TITLE_MENU;
+		return TITLE_ACTION;
 	}
 	
 
@@ -99,5 +99,20 @@ public class UsrMaster extends MasterAbs {
 	
 	public String getTitle() {
 		return TITLE;
+	}
+	
+	@Override
+	public String getTitleAction() {
+		return TITLE_ACTION;
+	}
+
+	@Override
+	public String getDescAction() {
+		return DESC_ACTION;
+	}
+	
+	@Override
+	public KeyStroke getKeyStroke() {
+		return KeyStroke.getKeyStroke(KEY_STROKE_ACTION);
 	}
 }

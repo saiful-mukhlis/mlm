@@ -1,8 +1,8 @@
 package com.basic.icon;
 
-import javax.swing.Icon;
-
 import com.global.App;
+
+import javax.swing.*;
 
 /**
  * klass bahasa

@@ -1,27 +1,25 @@
 package com.basic.dao.impl;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashSet;
-import java.util.List;
-
-import org.basic.comp.base.TextArea;
-import org.basic.comp.base.TextField;
-import org.basic.dao.abst.DaoAbstract;
-
 import com.basic.db.FGrp;
 import com.basic.db.FUsr;
 import com.basic.entity.Grp;
 import com.basic.entity.Usr;
 import com.basic.lang.LGrp;
 import com.global.App;
-import com.global.DataUser;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.id.ORecordId;
 import com.orientechnologies.orient.core.metadata.schema.OType;
 import com.orientechnologies.orient.core.record.impl.ODocument;
 import com.orientechnologies.orient.core.tx.OTransaction.TXTYPE;
+import org.basic.comp.base.TextArea;
+import org.basic.comp.base.TextField;
+import org.basic.dao.abst.DaoAbstract;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
 
 public class GrpDao extends DaoAbstract {
 

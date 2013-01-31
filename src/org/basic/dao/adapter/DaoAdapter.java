@@ -1,11 +1,12 @@
 package org.basic.dao.adapter;
 
-import java.util.HashSet;
-import java.util.List;
-
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.db.record.ORecordLazyList;
+import com.orientechnologies.orient.core.db.record.ORecordLazySet;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+
+import java.util.HashSet;
+import java.util.List;
 
 public class DaoAdapter implements DaoInterface {
 
@@ -263,6 +264,20 @@ public class DaoAdapter implements DaoInterface {
 			String col, String col2, String string) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public List<ODocument> getLinkList(ODatabaseDocumentTx db,
+			ORecordLazyList linklist) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<ODocument> getLinkList(ODatabaseDocumentTx db,
+			ORecordLazySet linklist) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	

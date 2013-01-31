@@ -1,33 +1,23 @@
 package com.basic.comp.impl.table.model;
 
-import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Date;
-
-import javax.swing.JMenuItem;
-import javax.swing.JPopupMenu;
-
-import org.basic.comp.abst.FactorySearch;
-import org.basic.comp.abst.TableModelAbs;
-import org.basic.comp.base.SplitButton;
-import org.basic.comp.base.TextFieldSearch;
-
 import com.basic.db.FJenisPekerjaan;
-import com.basic.db.FJenisPekerjaan;
-import com.basic.db.FUsr;
-import com.basic.entity.Grp;
 import com.basic.entity.JenisPekerjaan;
-import com.basic.entity.Usr;
 import com.basic.lang.LJenisPekerjaan;
-import com.basic.lang.LJenisPekerjaan;
-import com.basic.lang.LUsr;
 import com.basic.lang.LWindow;
 import com.global.App;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.abst.FactorySearch;
+import org.basic.comp.abst.TableModelAbs;
+import org.basic.comp.base.SplitButton;
+import org.basic.comp.base.TextFieldSearch;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class JenisPekerjaanTableModel extends TableModelAbs implements
 		FactorySearch {
@@ -45,7 +35,7 @@ public class JenisPekerjaanTableModel extends TableModelAbs implements
 
 		dao = App.getJenisPekerjaanDao();
 
-		nameColumn = new String[4];
+		nameColumn = new String[3];
 		nameColumn[NO] = LJenisPekerjaan.NO;
 		nameColumn[CODE] = LJenisPekerjaan.CODE;
 		nameColumn[NAMA] = LJenisPekerjaan.NAMA;

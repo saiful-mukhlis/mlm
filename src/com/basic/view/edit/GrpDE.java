@@ -1,16 +1,6 @@
 package com.basic.view.edit;
 
 
-
-import java.util.Date;
-
-import org.basic.comp.abst.DialogDefault;
-import org.basic.comp.abst.DialogEditDefault;
-import org.basic.comp.abst.FormBuilder;
-import org.basic.comp.base.ScrollPane;
-import org.basic.comp.base.TextArea;
-import org.basic.comp.base.TextField;
-
 import com.basic.comp.impl.master.GrpM;
 import com.basic.dao.impl.GrpDao;
 import com.basic.db.FGrp;
@@ -20,6 +10,13 @@ import com.global.DataUser;
 import com.jgoodies.forms.layout.FormLayout;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.abst.DialogEditDefault;
+import org.basic.comp.abst.FormBuilder;
+import org.basic.comp.base.ScrollPane;
+import org.basic.comp.base.TextArea;
+import org.basic.comp.base.TextField;
+
+import java.util.Date;
 
 
 

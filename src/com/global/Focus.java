@@ -1,10 +1,9 @@
 package com.global;
 
+import javax.swing.*;
+import javax.swing.text.JTextComponent;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-
-import javax.swing.JComponent;
-import javax.swing.text.JTextComponent;
 
 public class Focus {
 	public static void enter(JTextComponent sebelum,

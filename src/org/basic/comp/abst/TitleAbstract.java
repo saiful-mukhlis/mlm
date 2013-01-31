@@ -1,23 +1,14 @@
 package org.basic.comp.abst;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.SystemColor;
-
-import javax.swing.BorderFactory;
-import javax.swing.Icon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSeparator;
-
-import org.basic.comp.adapter.TitleAdapter;
-import org.basic.comp.base.GradientPanel;
-
 import com.jgoodies.forms.builder.PanelBuilder;
 import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.adapter.TitleAdapter;
+import org.basic.comp.base.GradientPanel;
+
+import javax.swing.*;
+import java.awt.*;
 
 public abstract class TitleAbstract implements TitleAdapter{
 	protected JPanel panelTitle;

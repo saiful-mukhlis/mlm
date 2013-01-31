@@ -1,8 +1,8 @@
 package com.global.util;
 
-import javax.swing.JOptionPane;
-
 import com.global.App;
+
+import javax.swing.*;
 
 public class Err {
 	public static void show(String err) {

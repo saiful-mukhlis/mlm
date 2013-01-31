@@ -1,19 +1,5 @@
 package org.basic.comp.abst;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-
-import javax.swing.Icon;
-import javax.swing.JComponent;
-import javax.swing.JMenu;
-import javax.swing.JMenuBar;
-import javax.swing.JMenuItem;
-import javax.swing.KeyStroke;
-import javax.swing.plaf.basic.BasicMenuBarUI;
-
 import com.basic.icon.IconBase;
 import com.basic.lang.LApp;
 import com.basic.lang.LWindow;
@@ -24,12 +10,19 @@ import com.jgoodies.looks.Options;
 import com.jgoodies.looks.plastic.PlasticLookAndFeel;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 
+import javax.swing.*;
+import javax.swing.plaf.basic.BasicMenuBarUI;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+
 public class MenuAbs implements Menu {
 	protected JMenuBar menuBar;
 	protected Window window;
 	protected JMenu file;
 	protected JMenuItem login;
-	protected JMenuItem exit;
+//	protected JMenuItem exit;
 	protected JMenuItem close;
 	protected JMenuItem print;
 
@@ -48,7 +41,7 @@ public class MenuAbs implements Menu {
 		menuBar = new JMenuBar();
 		file = new JMenu();
 		login = new JMenuItem();
-		exit = new JMenuItem();
+//		exit = new JMenuItem();
 		close = new JMenuItem();
 		print = new JMenuItem();
 
@@ -92,8 +85,8 @@ public class MenuAbs implements Menu {
 				ActionEvent.CTRL_MASK, IconBase.CLOSE);
 		createMenu(print, LApp.PRINT, KeyEvent.VK_P, KeyEvent.VK_P,
 				ActionEvent.CTRL_MASK, IconBase.PRINT);
-		createMenu(exit, LApp.EXIT, KeyEvent.VK_E, KeyEvent.VK_X,
-				ActionEvent.CTRL_MASK, IconBase.EXIT);
+//		createMenu(exit, LApp.EXIT, KeyEvent.VK_E, KeyEvent.VK_X,
+//				ActionEvent.CTRL_MASK, IconBase.EXIT);
 		createMenu(editMenu, LApp.EDIT);
 		createMenu(add, LApp.ADD, KeyEvent.VK_T, KeyEvent.VK_N,
 				ActionEvent.CTRL_MASK, IconBase.ADD);
@@ -115,12 +108,7 @@ public class MenuAbs implements Menu {
 			}
 		});
 
-		exit.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				window.actionExit();
-			}
-		});
+//		exit.addActionListener(App.getActions().get("exit"));
 
 		close.addActionListener(new ActionListener() {
 			@Override
@@ -185,7 +173,7 @@ public class MenuAbs implements Menu {
 		file.add(close);
 		file.add(print);
 		file.addSeparator();
-		file.add(exit);
+		file.add(App.getActions().get("exit"));
 
 		editMenu.add(add);
 		editMenu.add(edit);

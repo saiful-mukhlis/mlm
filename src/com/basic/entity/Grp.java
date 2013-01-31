@@ -1,19 +1,15 @@
 package com.basic.entity;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 import com.basic.db.FGrp;
 import com.basic.db.FUsr;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.db.record.OIdentifiable;
-import com.orientechnologies.orient.core.db.record.ORecordLazyList;
-import com.orientechnologies.orient.core.db.record.ORecordLazySet;
 import com.orientechnologies.orient.core.metadata.schema.OType;
 import com.orientechnologies.orient.core.record.impl.ODocument;
-import com.orientechnologies.orient.core.type.tree.OMVRBTreeRIDSet;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class Grp {
 	private String code;

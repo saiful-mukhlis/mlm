@@ -1,8 +1,8 @@
 package com.mlm.comp.base;
 
+import com.global.DataUser;
 import org.basic.comp.base.TreeHakAkses;
 import org.basic.comp.model.HakAksesTreeModel;
-import com.global.DataUser;
 
 public class TreeHakAksesMlm extends TreeHakAkses{
 	public HakAksesTreeModel buildHakakses() {

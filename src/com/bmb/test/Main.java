@@ -1,24 +1,16 @@
 package com.bmb.test;
 
-import java.awt.Color;
-import java.awt.Font;
-
-import javax.swing.UIDefaults;
-import javax.swing.UIManager;
-
 import com.basic.icon.IconBase;
 import com.basic.view.screen.SplashScreen;
 import com.global.App;
-import com.jgoodies.looks.FontPolicies;
-import com.jgoodies.looks.FontPolicy;
-import com.jgoodies.looks.FontSet;
-import com.jgoodies.looks.FontSets;
-import com.jgoodies.looks.Fonts;
-import com.jgoodies.looks.Options;
+import com.jgoodies.looks.*;
 import com.jgoodies.looks.windows.WindowsLookAndFeel;
 import com.mlm.comp.impl.WindowMlm;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class Main {
 	public static void main(String[] args) {

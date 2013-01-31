@@ -1,14 +1,14 @@
 package com.basic.view.detail;
 
-import org.basic.comp.abst.DetailAbs;
-import org.basic.comp.abst.FormBuilder;
-import org.basic.comp.base.ScrollPane;
-import org.basic.comp.base.TextField;
 import com.basic.entity.JenisPekerjaan;
 import com.basic.lang.LJenisPekerjaan;
 import com.global.App;
 import com.jgoodies.forms.layout.FormLayout;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.abst.DetailAbs;
+import org.basic.comp.abst.FormBuilder;
+import org.basic.comp.base.ScrollPane;
+import org.basic.comp.base.TextField;
 
 public class JenisPekerjaanDetail extends DetailAbs {
 	protected TextField code;

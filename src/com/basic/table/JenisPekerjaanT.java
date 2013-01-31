@@ -1,14 +1,10 @@
 package com.basic.table;
 
+import com.basic.table.model.JenisPekerjaanTM;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.basic.comp.abst.TableDefault;
-import org.basic.comp.listener.WidgetInterface;
 import org.jdesktop.swingx.JXTable;
 import org.jdesktop.swingx.table.TableColumnExt;
-
-import com.basic.table.model.JenisPekerjaanTM;
-import com.global.App;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
 
 public class JenisPekerjaanT extends TableDefault{
 

@@ -1,42 +1,28 @@
 package org.basic.comp.abst;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Font;
-import java.awt.Window;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.swing.Icon;
-import javax.swing.JButton;
-import javax.swing.JComponent;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JSeparator;
-import javax.swing.text.JTextComponent;
-
-import org.basic.comp.adapter.AddDialogAdapter;
-import org.basic.comp.adapter.EfectWidget;
-import org.basic.comp.adapter.ListInterfaces;
-import org.basic.comp.adapter.TableInterfaces;
-import org.basic.comp.base.GradientPanel;
-import org.basic.comp.base.ScrollPane;
-import org.basic.comp.listener.WidgetInterface;
-import org.basic.dao.adapter.DaoInterface;
-
 import com.basic.lang.LApp;
 import com.global.App;
 import com.jgoodies.forms.layout.FormLayout;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.adapter.AddDialogAdapter;
+import org.basic.comp.adapter.EfectWidget;
+import org.basic.comp.adapter.ListInterfaces;
+import org.basic.comp.base.GradientPanel;
+import org.basic.comp.base.ScrollPane;
+import org.basic.comp.listener.WidgetInterface;
+import org.basic.dao.adapter.DaoInterface;
+
+import javax.swing.*;
+import javax.swing.text.JTextComponent;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.util.ArrayList;
+import java.util.List;
 
 public  class DialogDefault extends AddDialogAdapter {
 
@@ -366,8 +352,8 @@ public  class DialogDefault extends AddDialogAdapter {
 
 
 	public void dispose(Object o) {
-		if (o instanceof Window) {
-			((Window) o).dispose();
+		if (o instanceof java.awt.Window) {
+			((java.awt.Window) o).dispose();
 		} else {
 			if (o instanceof Component) {
 				dispose(((Component) o).getParent());

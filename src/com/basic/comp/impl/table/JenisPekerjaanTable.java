@@ -1,12 +1,11 @@
 package com.basic.comp.impl.table;
 
+import com.basic.comp.impl.table.model.JenisPekerjaanTableModel;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.basic.comp.abst.PagingAbs;
 import org.basic.comp.abst.TableAbs;
 import org.jdesktop.swingx.JXTable;
 import org.jdesktop.swingx.table.TableColumnExt;
-
-import com.basic.comp.impl.table.model.JenisPekerjaanTableModel;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 
 public class JenisPekerjaanTable extends TableAbs {
 
@@ -51,10 +50,6 @@ public class JenisPekerjaanTable extends TableAbs {
 			tcx.setVisible(true);
 		}
 
-		tcx = table.getColumnExt(x[3]);
-		if (tcx != null) {
-			tcx.setVisible(true);
-		}
 
 	}
 

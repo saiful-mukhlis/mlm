@@ -1,24 +1,14 @@
 package org.basic.comp.abst;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dialog.ModalityType;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.JSeparator;
-
+import com.basic.comp.impl.action.ExitAction;
+import com.basic.lang.LApp;
+import com.basic.lang.LWindow;
+import com.global.App;
+import com.global.DataUser;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.basic.comp.base.LoginDialog;
 import org.basic.comp.base.PanelBottom;
 import org.noos.xing.mydoggy.Content;
-import org.noos.xing.mydoggy.ContentManager;
 import org.noos.xing.mydoggy.ContentManagerListener;
 import org.noos.xing.mydoggy.ToolWindow;
 import org.noos.xing.mydoggy.ToolWindowManager;
@@ -30,14 +20,11 @@ import org.noos.xing.yasaf.plaf.action.ViewContextAction;
 import org.noos.xing.yasaf.plaf.view.MapViewContext;
 import org.noos.xing.yasaf.view.ViewContext;
 
-import com.basic.comp.impl.master.UsrMaster;
-import com.basic.icon.IconBase;
-import com.basic.lang.LApp;
-import com.basic.lang.LWindow;
-import com.global.App;
-import com.global.DataUser;
-import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class WindowAbs implements Window {
 	protected Toolbar toolbar;
@@ -66,9 +53,14 @@ public class WindowAbs implements Window {
 	public void init() {
 		toolWindowManager = new MyDoggyToolWindowManager();
 		((MyDoggyToolWindowManager)toolWindowManager).getMainContainer().setBackground(Color.WHITE);
+		
 		frame = new JFrame();
+		
 		panelBottom = new PanelBottom();
 		viewContext=new MapViewContext();
+		
+		ExitAction exit=new ExitAction();
+		App.getActions().put("exit", exit);
 		
 //		masters=new ArrayList<>();
 	}

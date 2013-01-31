@@ -1,17 +1,15 @@
 package com.basic.comp.impl.master;
 
-import javax.swing.Icon;
-
-import org.basic.comp.abst.MasterAbs;
-import org.basic.comp.abst.WidgetChangeObj;
-import org.basic.comp.base.impl.ToolbarSmallCRUDS;
-
 import com.basic.comp.impl.table.GrpTable;
-import com.basic.comp.impl.table.UsrTable;
 import com.basic.view.add.GrpDN;
 import com.basic.view.detail.GrpDetail;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.abst.MasterAbs;
+import org.basic.comp.abst.WidgetChangeObj;
+import org.basic.comp.base.impl.ToolbarSmallCRUDS;
+
+import javax.swing.*;
 
 public class GrpMaster extends MasterAbs {
 	public static String TITLE_ADD = App.getT("Tambah Data Hak Akses");
@@ -20,8 +18,11 @@ public class GrpMaster extends MasterAbs {
 	public static String MNEMONIC = App.getT("H");
 	public static String ID_MASTER = "Hak Akses";
 	public static String TITLE = App.getT("Master Data Hak Akses");
-	public static String TITLE_MENU = App.getT("Hak Akses");
-	public static String TITLE_TOOLBAR = TITLE_MENU;
+	
+	public static String KEY_STROKE_ACTION = App.getT("ctrl H");
+	public static String TITLE_ACTION = App.getT("Hak Akses");
+	public static String DESC_ACTION = TITLE_ACTION;
+	
 	public static String URL_ICON_16 = "/image/hakakses-16.png";
 	public static String URL_ICON_32 = "/image/hakakses-32.png";
 	public static String URL_ICON_48 = "/image/hakakses-48.png";
@@ -81,12 +82,18 @@ public class GrpMaster extends MasterAbs {
 	}
 
 	@Override
-	public String getTitleToolBar() {
-		return TITLE.toUpperCase();
+	public String getTitleAction() {
+		return TITLE_ACTION;
+	}
+
+	@Override
+	public String getDescAction() {
+		return DESC_ACTION;
 	}
 	
-	public String getTitleMenu() {
-		return TITLE_MENU;
+	@Override
+	public KeyStroke getKeyStroke() {
+		return KeyStroke.getKeyStroke(KEY_STROKE_ACTION);
 	}
 	
 

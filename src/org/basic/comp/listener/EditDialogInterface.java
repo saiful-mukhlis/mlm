@@ -1,15 +1,10 @@
 package org.basic.comp.listener;
 
-import javax.swing.Icon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.basic.comp.adapter.ListInterfaces;
-import org.basic.comp.adapter.TableInterfaces;
 import org.basic.dao.adapter.DaoInterface;
 
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import javax.swing.*;
 
 public interface EditDialogInterface extends WidgetInterface {
 	

@@ -1,20 +1,5 @@
 package org.basic.comp.base;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
-import javax.swing.SwingConstants;
-
-import org.basic.comp.abst.ToolbarSmall;
-import org.basic.comp.listener.MasterInterface;
-
 import com.basic.icon.IconBase;
 import com.basic.lang.LActions;
 import com.basic.lang.LWindow;
@@ -23,6 +8,13 @@ import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.abst.ToolbarSmall;
+import org.basic.comp.listener.MasterInterface;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class ToolbarSmallRLTEDPPEWWIthSearch extends ToolbarSmallAdapter implements ToolbarSmall {

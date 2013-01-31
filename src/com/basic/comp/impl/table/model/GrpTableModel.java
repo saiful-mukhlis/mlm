@@ -1,29 +1,23 @@
 package com.basic.comp.impl.table.model;
 
-import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Date;
-
-import javax.swing.JMenuItem;
-import javax.swing.JPopupMenu;
-
-import org.basic.comp.abst.FactorySearch;
-import org.basic.comp.abst.TableModelAbs;
-import org.basic.comp.base.SplitButton;
-import org.basic.comp.base.TextFieldSearch;
-
 import com.basic.db.FGrp;
-import com.basic.db.FJenisPekerjaan;
 import com.basic.entity.Grp;
-import com.basic.entity.Usr;
 import com.basic.lang.LGrp;
 import com.basic.lang.LWindow;
 import com.global.App;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.abst.FactorySearch;
+import org.basic.comp.abst.TableModelAbs;
+import org.basic.comp.base.SplitButton;
+import org.basic.comp.base.TextFieldSearch;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class GrpTableModel extends TableModelAbs implements FactorySearch {
 	protected final int NO = 0;

@@ -1,17 +1,14 @@
 package com.mlm.comp.impl.master;
 
 
-
-import javax.swing.Icon;
-
-import org.basic.comp.abst.MasterDefault;
-
 import com.global.App;
 import com.mlm.tree.PelangganTree;
 import com.mlm.view.add.PelangganDN;
-import com.mlm.view.detail.PelangganV;
 import com.mlm.view.detail.PpV;
 import com.mlm.view.edit.PelangganDE;
+import org.basic.comp.abst.MasterDefault;
+
+import javax.swing.*;
 
 public class PelangganM extends MasterDefault {
 	

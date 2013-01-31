@@ -1,11 +1,11 @@
 package org.basic.comp.base;
-import java.awt.Component;
-import java.util.List;
-
 
 import org.basic.comp.adapter.WindowInterfaces;
 import org.noos.xing.mydoggy.ToolWindowManager;
 import org.noos.xing.yasaf.plaf.view.MapViewContext;
+
+import java.awt.*;
+import java.util.List;
 
 
 public class Context  extends MapViewContext {

@@ -1,12 +1,11 @@
 package com.basic.table.model;
 
-import org.basic.comp.abst.TableModelDefault;
-
 import com.basic.db.FJenisPekerjaan;
 import com.basic.lang.LJenisPekerjaan;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.abst.TableModelDefault;
 
 public class JenisPekerjaanTM  extends TableModelDefault{
 

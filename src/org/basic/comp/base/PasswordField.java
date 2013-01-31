@@ -1,12 +1,11 @@
 package org.basic.comp.base;
 
-import java.awt.Color;
+import com.global.App;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
-
-import javax.swing.JPasswordField;
-
-import com.global.App;
 
 public class PasswordField extends JPasswordField {
 	/**

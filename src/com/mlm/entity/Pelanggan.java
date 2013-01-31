@@ -1,11 +1,11 @@
 package com.mlm.entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.mlm.db.FPelanggan;
 import com.orientechnologies.orient.core.metadata.schema.OType;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Pelanggan {
 	private String namaToko;

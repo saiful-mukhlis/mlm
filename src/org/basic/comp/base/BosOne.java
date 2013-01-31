@@ -1,12 +1,6 @@
 package org.basic.comp.base;
 
-import java.util.prefs.Preferences;
-
-
-import com.basic.db.FBos;
-import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
 
 public class BosOne {
 	private String loc = "";

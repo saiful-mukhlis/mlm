@@ -1,15 +1,14 @@
 package com.basic.table;
 
-import javax.swing.JOptionPane;
-
-import org.basic.comp.abst.TableDefault;
-import org.jdesktop.swingx.JXTable;
-import org.jdesktop.swingx.table.TableColumnExt;
-
 import com.basic.table.model.GrpTM;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.abst.TableDefault;
+import org.jdesktop.swingx.JXTable;
+import org.jdesktop.swingx.table.TableColumnExt;
+
+import javax.swing.*;
 
 public class GrpT extends TableDefault{
 

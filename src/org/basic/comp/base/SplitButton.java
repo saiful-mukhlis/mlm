@@ -6,31 +6,15 @@ package org.basic.comp.base;
  * Created on 13 de Janeiro de 2007, 05:42
  */
 
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.FontMetrics;
-import java.awt.Graphics;
-import java.awt.Insets;
-import java.awt.Point;
-import java.awt.Rectangle;
-import java.awt.event.ActionEvent;
-import javax.swing.Action;
-import javax.swing.DefaultButtonModel;
-import javax.swing.Icon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPopupMenu;
-import javax.swing.SwingConstants;
-import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
+import javax.swing.*;
 import javax.swing.event.PopupMenuEvent;
 import javax.swing.plaf.basic.BasicHTML;
 import javax.swing.text.View;
+import java.awt.*;
+import java.awt.event.ActionEvent;
 
 /**
- * @author Mário César
+ * @author Mï¿½rio Cï¿½sar
  */
 public class SplitButton extends JButton implements SwingConstants {
     private JLabel arrowLabel;

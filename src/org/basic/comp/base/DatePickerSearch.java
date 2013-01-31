@@ -1,13 +1,11 @@
 package org.basic.comp.base;
 
-import java.awt.Color;
-import java.util.Date;
-import java.util.Locale;
-
-
+import com.global.App;
 import org.jdesktop.swingx.JXDatePicker;
 
-import com.global.App;
+import java.awt.*;
+import java.util.Date;
+import java.util.Locale;
 
 public class DatePickerSearch extends JXDatePicker {
 

@@ -1,19 +1,14 @@
 package org.basic.comp.adapter;
 
-import java.util.List;
-
-import javax.swing.JPanel;
-import javax.swing.JTable;
-
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.record.impl.ODocument;
 import org.basic.comp.base.SplitButton;
 import org.basic.comp.base.TextFieldSearch;
 import org.basic.comp.listener.MasterInterface;
 import org.basic.comp.listener.PanelBottomInterface;
 import org.basic.comp.listener.WidgetInterface;
 
-
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
+import javax.swing.*;
 
 
 

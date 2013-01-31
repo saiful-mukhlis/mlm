@@ -1,17 +1,12 @@
 package org.basic.comp.abst;
 
-import java.awt.BorderLayout;
-
-import javax.swing.Icon;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.SwingConstants;
-
-import org.basic.comp.base.ScrollPane;
-
 import com.basic.icon.IconBase;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.base.ScrollPane;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class DetailAbs implements Detail, WidgetChangeObj {
 	protected JPanel panel;

@@ -1,37 +1,7 @@
 package com.global;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Toolkit;
-import java.awt.Window;
-import java.awt.Dialog.ModalityType;
-import java.text.DateFormat;
-import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
-
-import javax.swing.BorderFactory;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.UIDefaults;
-import javax.swing.UIManager;
-import javax.swing.border.Border;
-
-import org.basic.comp.base.NumberRenderer;
-
 import com.basic.comp.impl.NamaBulan;
-//import com.basic.dao.impl.AgamaDao;
-import com.basic.dao.impl.BosDao;
-import com.basic.dao.impl.GrpDao;
-import com.basic.dao.impl.JenisPekerjaanDao;
-import com.basic.dao.impl.NumberIdDao;
-import com.basic.dao.impl.UsrDao;
+import com.basic.dao.impl.*;
 import com.basic.lang.Lang;
 import com.mlm.dao.impl.PaketDao;
 import com.mlm.dao.impl.PelangganDao;
@@ -44,6 +14,18 @@ import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.exception.OStorageException;
 import com.orientechnologies.orient.object.db.OObjectDatabasePool;
 import com.orientechnologies.orient.object.db.OObjectDatabaseTx;
+import org.basic.comp.base.NumberRenderer;
+
+import javax.swing.*;
+import javax.swing.border.Border;
+import java.awt.*;
+import java.awt.Dialog.ModalityType;
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
+import java.util.HashMap;
+
+//import com.basic.dao.impl.AgamaDao;
 
 /**
  * @author toyib Class ini di gunalan untuk variable yang di access secara
@@ -102,6 +84,10 @@ public class App {
 	public static Border borderBlackAtasBawahKiri = BorderFactory.createMatteBorder(1, 1, 1, 0, App.blacksmoot);
 	public static Border borderBlackAtasBawahKanan = BorderFactory.createMatteBorder(1, 0, 1, 1, App.blacksmoot);
 	
+	
+	public static HashMap<String, AbstractAction > actions;
+	
+	
 //	public static BorderLayout borderLayout;
 //	public static BorderLayout getBorderLayout(){
 //		if (borderLayout==null) {
@@ -110,6 +96,16 @@ public class App {
 //		return borderLayout;
 //	}
 	
+	public static HashMap<String, AbstractAction> getActions() {
+		if (actions==null) {
+			actions=new HashMap<>();
+		}
+		return actions;
+	}
+	public static void setActions(HashMap<String, AbstractAction> actions) {
+		App.actions = actions;
+	}
+
 	public static Font fontTitleToolbar;
 	public static Font getFontTitleToolbar(){
 		if (fontTitleToolbar==null) {
@@ -143,6 +139,7 @@ public class App {
 
 	public static void showDialog(Object o, JPanel panel){
 		JDialog d = new JDialog(getWindow(o), ModalityType.APPLICATION_MODAL);
+//		d.setUndecorated(true);
 		d.getContentPane().add(panel);
 		d.pack();
 		d.setLocation((Toolkit.getDefaultToolkit().getScreenSize().width - d
@@ -264,7 +261,7 @@ public class App {
 	 */
 	public static OObjectDatabaseTx getDb() {
 		//String url = "local:c://test/db";
-		String url = "local:db/db";
+		String url = "local:../db";
 		String user = "admin";
 		String pwd = "admin";
 
@@ -299,7 +296,7 @@ public class App {
 	 */
 	public static ODatabaseDocumentTx getDbd() {
 		//String url = "local:c://test/db";
-		String url = "local:db/db";
+		String url = "local:../db";
 		String user = "admin";
 		String pwd = "admin";
 

@@ -1,8 +1,7 @@
 package org.basic.comp.model;
 
-import org.basic.dao.adapter.DaoInterface;
-
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.dao.adapter.DaoInterface;
 
 public class ODocumentToString {
 	private DaoInterface dao;

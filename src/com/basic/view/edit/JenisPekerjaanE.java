@@ -1,8 +1,6 @@
 package com.basic.view.edit;
 
 
-import org.basic.comp.listener.WidgetInterface;
-
 import com.basic.comp.impl.master.JenisPekerjaanM;
 import com.basic.dao.impl.JenisPekerjaanDao;
 import com.basic.icon.IconBase;
@@ -11,6 +9,7 @@ import com.global.App;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.listener.WidgetInterface;
 
 public class JenisPekerjaanE extends JenisPekerjaanN {
 	

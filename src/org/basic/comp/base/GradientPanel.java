@@ -1,15 +1,8 @@
 package org.basic.comp.base;
 
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.GradientPaint;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.LayoutManager;
-import java.awt.Paint;
-
-import javax.swing.JPanel;
+import javax.swing.*;
+import java.awt.*;
 
 public class GradientPanel extends JPanel {
 

@@ -1,16 +1,13 @@
 package org.basic.comp.base;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
-import javax.swing.JLabel;
-
-import org.basic.comp.listener.MasterInterface;
-
 import com.basic.lang.LApp;
 import com.global.App;
 import com.jgoodies.forms.layout.CellConstraints;
+import org.basic.comp.listener.MasterInterface;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class ToolbarSmallRP extends ToolbarSmallAdapter {

@@ -1,11 +1,9 @@
 package org.basic.comp.base;
 
-import java.awt.Color;
-import java.awt.Component;
-
-import javax.swing.JScrollPane;
-
 import com.global.App;
+
+import javax.swing.*;
+import java.awt.*;
 
 public class ScrollPane extends JScrollPane {
 

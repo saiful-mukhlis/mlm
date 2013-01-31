@@ -1,29 +1,5 @@
 package com.mlm.view.add;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.event.FocusEvent;
-import java.awt.event.FocusListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
-import java.math.BigDecimal;
-import java.util.Date;
-import java.util.List;
-
-import javax.swing.BorderFactory;
-import javax.swing.JPopupMenu;
-
-import org.basic.comp.abst.DialogDefault;
-import org.basic.comp.abst.FormBuilder;
-import org.basic.comp.base.ComboBox;
-import org.basic.comp.base.DatePicker;
-import org.basic.comp.base.ScrollPane;
-import org.basic.comp.base.TextField;
-import org.basic.comp.base.TextFieldAmount;
-import org.jdesktop.swingx.JXTable;
-import org.jdesktop.swingx.decorator.HighlighterFactory;
-
-import com.basic.lang.LPelanggan;
 import com.global.App;
 import com.jgoodies.forms.layout.FormLayout;
 import com.mlm.comp.impl.master.PelangganM;
@@ -32,12 +8,26 @@ import com.mlm.db.FPaket;
 import com.mlm.db.FPelanggan;
 import com.mlm.lang.LPp;
 import com.mlm.table.model.PaketTMS;
-import com.mlm.table.model.PelangganTMS;
 import com.mlm.table.model.PpTMS;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
 import com.orientechnologies.orient.core.tx.OTransaction.TXTYPE;
+import org.basic.comp.abst.DialogDefault;
+import org.basic.comp.abst.FormBuilder;
+import org.basic.comp.base.*;
+import org.jdesktop.swingx.JXTable;
+import org.jdesktop.swingx.decorator.HighlighterFactory;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.math.BigDecimal;
+import java.util.Date;
+import java.util.List;
 
 public class PelangganDAddPaket extends DialogDefault {
 	

@@ -1,18 +1,6 @@
 package com.basic.view.add;
 
 
-
-import java.util.Date;
-
-import org.basic.comp.abst.AddPanelAbs;
-import org.basic.comp.abst.FormBuilder;
-import org.basic.comp.base.ComboBox;
-import org.basic.comp.base.DatePicker;
-import org.basic.comp.base.PasswordField;
-import org.basic.comp.base.ScrollPane;
-import org.basic.comp.base.TextArea;
-import org.basic.comp.base.TextField;
-import org.basic.comp.base.TextFieldAmount;
 import com.basic.dao.impl.UsrDao;
 import com.basic.db.FUsr;
 import com.basic.entity.Grp;
@@ -27,6 +15,11 @@ import com.global.util.Account;
 import com.global.util.Validate;
 import com.jgoodies.forms.layout.FormLayout;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.abst.AddPanelAbs;
+import org.basic.comp.abst.FormBuilder;
+import org.basic.comp.base.*;
+
+import java.util.Date;
 
 
 

@@ -1,22 +1,17 @@
 package org.basic.comp.abst;
 
-import java.awt.BorderLayout;
-
-import javax.swing.JPanel;
-import javax.swing.JSplitPane;
-
-import org.basic.comp.adapter.DetailWidgetInterface;
-import org.basic.comp.adapter.MasterAdapter;
-import org.basic.comp.adapter.TableInterfaces;
-import org.basic.comp.adapter.ToolbarSmallAdapter;
-import org.basic.comp.base.SplitPane;
-import org.basic.comp.base.ToolbarSmallAdapter;
-import org.basic.comp.base.ToolbarSmallRLTEDP;
-
 import com.global.App;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.adapter.DetailWidgetInterface;
+import org.basic.comp.adapter.MasterAdapter;
+import org.basic.comp.adapter.TableInterfaces;
+import org.basic.comp.base.ToolbarSmallAdapter;
+import org.basic.comp.base.ToolbarSmallRLTEDP;
+
+import javax.swing.*;
+import java.awt.*;
 
 public  class MasterTable extends MasterAdapter{
 

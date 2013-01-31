@@ -1,17 +1,11 @@
 package com.global.util;
 
-import java.util.Arrays;
-
-import javax.swing.JComboBox;
-import javax.swing.JPasswordField;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
-
-import org.basic.dao.adapter.DaoInterface;
-
-
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.dao.adapter.DaoInterface;
+
+import javax.swing.*;
+import java.util.Arrays;
 
 public class Validate {
 	public static boolean validateStringEmpty(JTextField f, String nf) {

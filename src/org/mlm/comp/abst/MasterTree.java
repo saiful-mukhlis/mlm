@@ -1,23 +1,12 @@
 package org.mlm.comp.abst;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Toolkit;
-import java.awt.Window;
-import java.awt.Dialog.ModalityType;
-
-import javax.swing.JDialog;
-import javax.swing.JPanel;
-import javax.swing.JSplitPane;
-
+import com.basic.print.interfaces.PrintInterface;
+import com.global.App;
+import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.basic.comp.adapter.DetailWidgetInterface;
 import org.basic.comp.adapter.MasterAdapter;
-import org.basic.comp.adapter.TableInterfaces;
 import org.basic.comp.base.SplitPane;
-import org.basic.comp.base.ToolbarSmallAdapter;
-import org.basic.comp.base.ToolbarSmallRLTEDP;
-import org.basic.comp.base.ToolbarSmallRLTED;
-import org.basic.comp.base.ToolbarSmallRLTEDPPEW;
 import org.basic.comp.base.ToolbarSmallRLTEDPPEWWIthSearch;
 import org.basic.comp.listener.AddDialogInterface;
 import org.basic.comp.listener.EditDialogInterface;
@@ -25,12 +14,9 @@ import org.basic.comp.listener.MasterDefaultInterface;
 import org.basic.comp.listener.ToolbarSmallInterface;
 import org.mlm.comp.adapter.TreeInterfaces;
 
-import com.basic.print.UsrPrintAll;
-import com.basic.print.interfaces.PrintInterface;
-import com.global.App;
-import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.Dialog.ModalityType;
 
 public abstract  class MasterTree extends MasterAdapter implements MasterDefaultInterface{
 

@@ -1,16 +1,14 @@
 package com.mlm.comp.impl.master;
 
 
-
-import javax.swing.Icon;
-
-import org.basic.comp.abst.MasterDefault;
-
 import com.global.App;
 import com.mlm.tree.PaketTree;
 import com.mlm.view.add.PaketDN;
 import com.mlm.view.detail.PaketV;
 import com.mlm.view.edit.PaketDE;
+import org.basic.comp.abst.MasterDefault;
+
+import javax.swing.*;
 
 public class PaketM extends MasterDefault {
 	

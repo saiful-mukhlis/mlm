@@ -1,7 +1,8 @@
 package org.basic.comp.adapter;
 
-import javax.swing.table.TableModel;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+
+import javax.swing.table.TableModel;
 
 public interface ParentPagingInterface extends TableModel {
 	public void setPaging(PagingInterface paging);

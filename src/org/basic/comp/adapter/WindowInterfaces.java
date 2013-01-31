@@ -1,16 +1,15 @@
 package org.basic.comp.adapter;
 
-import java.awt.Component;
-import java.util.HashMap;
-import java.util.List;
-
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.basic.comp.base.Komponent;
 import org.basic.comp.base.PanelBottom;
 import org.basic.comp.listener.WidgetInterface;
 import org.noos.xing.mydoggy.ToolWindowManager;
 import org.noos.xing.mydoggy.mydoggyset.action.AddContentAction;
 
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import java.awt.*;
+import java.util.HashMap;
+import java.util.List;
 
 public interface WindowInterfaces extends WidgetInterface {
 public void initToolbar(ODatabaseDocumentTx db);

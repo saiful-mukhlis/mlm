@@ -1,14 +1,12 @@
 package com.mlm.view.add;
 
-import java.awt.BorderLayout;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSeparator;
-
+import com.basic.lang.LPelanggan;
+import com.global.App;
+import com.jgoodies.forms.layout.FormLayout;
+import com.mlm.comp.impl.master.PelangganM;
+import com.mlm.dao.impl.PelangganDao;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.record.impl.ODocument;
 import org.basic.comp.abst.DialogDefault;
 import org.basic.comp.abst.FormBuilder;
 import org.basic.comp.base.ComboBox;
@@ -17,13 +15,10 @@ import org.basic.comp.base.TextArea;
 import org.basic.comp.base.TextField;
 import org.basic.comp.model.ODocumentToString;
 
-import com.basic.lang.LPelanggan;
-import com.global.App;
-import com.jgoodies.forms.layout.FormLayout;
-import com.mlm.comp.impl.master.PelangganM;
-import com.mlm.dao.impl.PelangganDao;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class PelangganDN2 extends DialogDefault {
 	

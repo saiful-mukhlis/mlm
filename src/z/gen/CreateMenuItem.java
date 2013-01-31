@@ -1,18 +1,9 @@
 package z.gen;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.lang.reflect.Field;
-
-import javax.swing.JMenuItem;
-
-import com.basic.annotation.db.Type;
-import com.basic.db.FUsr;
-import com.basic.lang.LUsr;
-import com.basic.lang.LWindow;
 import com.global.App;
-import com.google.common.base.CaseFormat;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+
+import java.lang.reflect.Field;
 
 public class CreateMenuItem {
 

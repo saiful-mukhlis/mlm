@@ -1,13 +1,12 @@
 package org.basic.comp.abst;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.swing.table.AbstractTableModel;
-
 import org.basic.comp.adapter.PagingInterface;
 import org.basic.comp.adapter.TableInterfaces;
 import org.basic.comp.adapter.TableModelInterface;
+
+import javax.swing.table.AbstractTableModel;
+import java.util.ArrayList;
+import java.util.List;
 
 
 

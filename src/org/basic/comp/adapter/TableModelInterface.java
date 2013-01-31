@@ -1,15 +1,13 @@
 package org.basic.comp.adapter;
 
-import java.util.List;
-
-import javax.swing.table.TableModel;
-
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.record.impl.ODocument;
 import org.basic.comp.base.SplitButton;
 import org.basic.comp.base.TextFieldSearch;
 import org.basic.dao.adapter.DaoInterface;
 
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
+import javax.swing.table.TableModel;
+import java.util.List;
 
 public interface TableModelInterface extends TableModel {
 	public void addModel(ODocument model);

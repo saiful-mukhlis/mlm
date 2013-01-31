@@ -1,16 +1,14 @@
 package org.basic.comp.abst;
 
-import java.awt.BorderLayout;
-
-import javax.swing.Icon;
-import javax.swing.JPanel;
-import javax.swing.JSplitPane;
-
+import com.basic.comp.impl.action.ViewMasterAction;
+import com.global.App;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.basic.comp.base.SplitPane;
 import org.noos.xing.yasaf.plaf.action.ViewContextAction;
 
-import com.global.App;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import javax.swing.*;
+
+import java.awt.*;
 
 public class MasterAbs implements Master {
 	protected JPanel panel;
@@ -22,8 +20,9 @@ public class MasterAbs implements Master {
 	protected int devide;
 	protected double lebar=0.5;
 	protected Window window;
-	protected ViewContextAction vca;
-	protected AddContentAction aca;
+	protected ViewMasterAction viewMasterAction;
+//	protected ViewContextAction vca;
+//	protected AddContentAction aca;
 	protected boolean builded=false;
 	
 	protected FactorySearch factorySearch;
@@ -39,8 +38,12 @@ public class MasterAbs implements Master {
 	@Override
 	public void init() {
 		panel=new JPanel(new BorderLayout());
-		vca=new ViewContextAction(getTitleMenu(), getIcon16(), window.getViewContext(), getIdMaster());
-		aca=new AddContentAction(this);
+		
+		viewMasterAction=new ViewMasterAction(this, window.getViewContext(), getIdMaster());
+		App.getActions().put(getIdMaster(), viewMasterAction);
+//		vca=new ViewContextAction(getTitleMenu(), getIcon16(), window.getViewContext(), getIdMaster());
+		
+//		aca=new AddContentAction(this);
 	}
 
 	public int getMnemonic() {
@@ -304,21 +307,23 @@ public class MasterAbs implements Master {
 		return null;
 	}
 
-	public ViewContextAction getVca() {
-		return vca;
+
+
+	public ViewMasterAction getViewMasterAction() {
+		return viewMasterAction;
 	}
 
-	public void setVca(ViewContextAction vca) {
-		this.vca = vca;
+	public void setViewMasterAction(ViewMasterAction viewMasterAction) {
+		this.viewMasterAction = viewMasterAction;
 	}
 
-	public AddContentAction getAca() {
-		return aca;
-	}
-
-	public void setAca(AddContentAction aca) {
-		this.aca = aca;
-	}
+//	public AddContentAction getAca() {
+//		return aca;
+//	}
+//
+//	public void setAca(AddContentAction aca) {
+//		this.aca = aca;
+//	}
 
 	@Override
 	public boolean isBuilded() {
@@ -343,6 +348,21 @@ public class MasterAbs implements Master {
 		
 		panel.add(toolbarSmall.getPanel(), BorderLayout.NORTH);
 		panel.add(splitPane, BorderLayout.CENTER);
+	}
+
+	@Override
+	public String getTitleAction() {
+		return null;
+	}
+
+	@Override
+	public String getDescAction() {
+		return null;
+	}
+
+	@Override
+	public KeyStroke getKeyStroke() {
+		return null;
 	}
 
 

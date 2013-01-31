@@ -1,10 +1,9 @@
 package org.basic.comp.adapter;
 
 
-import java.util.List;
-
-import javax.swing.JTable;
+import javax.swing.*;
 import javax.swing.table.TableModel;
+import java.util.List;
 
 public interface TableModelSearchAdapter extends TableModel {
 	public boolean isInstace(Object model);

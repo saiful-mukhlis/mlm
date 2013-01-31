@@ -1,13 +1,12 @@
 package com.basic.dao.impl;
 
-import org.basic.comp.base.TextField;
-import org.basic.dao.abst.DaoAbstract;
-
 import com.basic.db.FJenisPekerjaan;
 import com.basic.lang.LJenisPekerjaan;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.base.TextField;
+import org.basic.dao.abst.DaoAbstract;
 
 
 

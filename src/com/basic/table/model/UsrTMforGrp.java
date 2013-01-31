@@ -1,9 +1,9 @@
 package com.basic.table.model;
 
-import java.util.List;
-
 import com.basic.comp.impl.table.model.UsrTableModel;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+
+import java.util.List;
 
 public class UsrTMforGrp extends UsrTableModel {
 

@@ -1,58 +1,26 @@
 package org.basic.comp.abst;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Container;
-import java.awt.Window;
-import java.awt.Dialog.ModalityType;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.swing.BorderFactory;
-import javax.swing.JDialog;
-import javax.swing.JFrame;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
-import javax.swing.ListSelectionModel;
-
-import org.basic.comp.adapter.EfectWidget;
-import org.basic.comp.adapter.ListInterfaces;
-import org.basic.comp.adapter.PagingInterface;
-import org.basic.comp.adapter.ParentPagingInterface;
-import org.basic.comp.adapter.TableAdapter;
-import org.basic.comp.adapter.TableInterfaces;
-import org.basic.comp.adapter.TableModelAdapter;
-import org.basic.comp.adapter.TableModelInterface;
+import com.basic.icon.IconBase;
+import com.basic.lang.LActions;
+import com.basic.lang.LDialog;
+import com.basic.lang.LWindow;
+import com.global.App;
+import com.mlm.view.add.PelangganDAddDownline;
+import com.mlm.view.add.PelangganDAddPaket;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.adapter.*;
 import org.basic.comp.def.PagingDefault;
 import org.basic.comp.listener.MasterInterface;
 import org.basic.comp.listener.WidgetInterface;
 import org.jdesktop.swingx.JXTable;
 import org.jdesktop.swingx.decorator.HighlighterFactory;
 
-import com.basic.icon.IconBase;
-import com.basic.lang.LActions;
-import com.basic.lang.LDialog;
-import com.basic.lang.LPelanggan;
-import com.basic.lang.LWindow;
-import com.global.App;
-import com.mlm.comp.model.PelangganTreeTableNodeModel;
-import com.mlm.db.FPp;
-import com.mlm.view.add.PelangganDAddDownline;
-import com.mlm.view.add.PelangganDAddPaket;
-import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class TableDefault extends TableAdapter {
 	

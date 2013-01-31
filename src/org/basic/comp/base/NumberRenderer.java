@@ -1,9 +1,9 @@
 package org.basic.comp.base;
 
 
+import javax.swing.*;
 import java.text.NumberFormat;
 import java.util.Locale;
-import javax.swing.SwingConstants;
 
 public class NumberRenderer extends FormatRenderer
 {

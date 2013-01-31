@@ -28,6 +28,13 @@ public class LApp {
 	public static String ADD=App.getT("Tambah");
 	public static String DEL=App.getT("Delete");
 	public static String VIEW=App.getT("View");
+
+	
+	public static char EXIT_MNEMONIC=App.getT("E").charAt(0);
+
+	public static String EXIT_DESC=App.getT("Exit from Application");
+	
+	
 	
 	
 	public static String LOADING=App.getT("Loading.........");

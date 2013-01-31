@@ -1,23 +1,12 @@
 package org.basic.comp.abst;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Dimension;
-import java.awt.Toolkit;
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.swing.Icon;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-
+import com.basic.lang.LApp;
+import com.basic.lang.LWindow;
+import com.global.App;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.basic.comp.adapter.MenuAdapter;
-import org.basic.comp.adapter.MenuInterface;
 import org.basic.comp.adapter.ToolbarAdapter;
 import org.basic.comp.adapter.WindowAdapter;
-import org.basic.comp.adapter.WindowInterfaces;
 import org.basic.comp.base.BosOne;
 import org.basic.comp.base.PanelBottom;
 import org.noos.xing.mydoggy.Content;
@@ -30,10 +19,10 @@ import org.noos.xing.mydoggy.plaf.MyDoggyToolWindowManager;
 import org.noos.xing.mydoggy.plaf.ui.cmp.ExtendedTableLayout;
 import org.noos.xing.yasaf.view.ViewContext;
 
-import com.basic.lang.LApp;
-import com.basic.lang.LWindow;
-import com.global.App;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import javax.swing.*;
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class WindowAbstract extends WindowAdapter{
 	protected ToolbarAdapter toolbar;

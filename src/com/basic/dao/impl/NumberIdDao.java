@@ -1,14 +1,13 @@
 package com.basic.dao.impl;
 
 
-import org.basic.dao.abst.DaoAbstract;
-
 import com.basic.db.FNumberId;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.metadata.schema.OType;
 import com.orientechnologies.orient.core.record.impl.ODocument;
 import com.orientechnologies.orient.core.sql.OCommandSQL;
+import org.basic.dao.abst.DaoAbstract;
 
 public class NumberIdDao extends DaoAbstract {
 

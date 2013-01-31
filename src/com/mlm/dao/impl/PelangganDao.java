@@ -1,27 +1,21 @@
 package com.mlm.dao.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.basic.comp.base.TextArea;
-import org.basic.comp.base.TextField;
-import org.basic.comp.model.ODocumentToString;
-import org.basic.dao.abst.DaoAbstract;
-
-import com.basic.dao.impl.GrpDao;
-import com.basic.db.FGrp;
-import com.basic.db.FUsr;
 import com.basic.lang.LPelanggan;
 import com.global.App;
-import com.mlm.db.FPaket;
 import com.mlm.db.FPelanggan;
-import com.mlm.db.FPp;
 import com.mlm.db.FStatusPelanggan;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.id.ORecordId;
 import com.orientechnologies.orient.core.metadata.schema.OType;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.base.TextArea;
+import org.basic.comp.base.TextField;
+import org.basic.comp.model.ODocumentToString;
+import org.basic.dao.abst.DaoAbstract;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PelangganDao extends DaoAbstract {
 

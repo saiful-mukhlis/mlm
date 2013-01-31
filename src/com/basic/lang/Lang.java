@@ -1,11 +1,11 @@
 package com.basic.lang;
 
 
+import com.google.common.base.CharMatcher;
+
 import java.util.Locale;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
-
-import com.google.common.base.CharMatcher;
 
 public class Lang {
 	private Locale locale;

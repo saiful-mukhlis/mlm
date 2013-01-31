@@ -1,11 +1,11 @@
 package com.mlm.entity;
 
-import java.math.BigDecimal;
-import java.util.Date;
-
 import com.mlm.db.FHistoryBayar;
 import com.orientechnologies.orient.core.metadata.schema.OType;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+
+import java.math.BigDecimal;
+import java.util.Date;
 
 public class HistoryBayar {
 	private Date tglBayar;

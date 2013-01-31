@@ -1,20 +1,15 @@
 package org.basic.comp.base;
 
-import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JMenuItem;
-import javax.swing.JPopupMenu;
-
-import org.basic.comp.listener.MasterInterface;
-
 import com.basic.icon.IconBase;
 import com.basic.lang.LActions;
 import com.global.App;
 import com.jgoodies.forms.layout.CellConstraints;
+import org.basic.comp.listener.MasterInterface;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public class ToolbarSmallRLTEDPPEW extends ToolbarSmallAdapter {

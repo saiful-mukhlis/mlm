@@ -1,21 +1,5 @@
 package org.basic.comp.base;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Font;
-import java.awt.SystemColor;
-import java.awt.Window;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.BorderFactory;
-import javax.swing.Icon;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSeparator;
-
 import com.basic.db.FUsr;
 import com.basic.entity.Grp;
 import com.basic.entity.Usr;
@@ -32,6 +16,11 @@ import com.jgoodies.forms.layout.CellConstraints;
 import com.jgoodies.forms.layout.FormLayout;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class LoginDialog {
 	private JPanel panel;
@@ -62,7 +51,9 @@ public class LoginDialog {
 		});
 		passwordField = new PasswordField();
 		okButton = new JButton(LApp.LOGIN);
+		okButton.setMnemonic('L');
 		cancelButton = new JButton(LApp.CANCEL);
+		cancelButton.setMnemonic('C');
 
 		panelTitle = new JPanel();
 		titleLabel = new JLabel(LLogin.title);
@@ -162,7 +153,7 @@ public class LoginDialog {
 		try {
 			ODatabaseDocumentTx db = App.getDbdLocal();
 			ODocument usr = App.getUsrDao().getOne(db, FUsr.USERNAME, u);
-			System.out.println(usr.toJSON());
+//			System.out.println(usr.toJSON());
 			if (usr == null) {
 				Err.showErrUsernameTidakTerdaftar();
 			} else {
@@ -195,8 +186,8 @@ public class LoginDialog {
 	}
 
 	public void dispose(Object o) {
-		if (o instanceof Window) {
-			((Window) o).dispose();
+		if (o instanceof java.awt.Window) {
+			((java.awt.Window) o).dispose();
 		} else {
 			if (o instanceof Component) {
 				dispose(((Component) o).getParent());

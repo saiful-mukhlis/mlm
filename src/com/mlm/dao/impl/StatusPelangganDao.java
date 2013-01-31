@@ -1,13 +1,12 @@
 package com.mlm.dao.impl;
 
-import org.basic.comp.base.TextField;
-import org.basic.dao.abst.DaoAbstract;
-
 import com.global.App;
 import com.mlm.db.FStatusPelanggan;
 import com.mlm.lang.LStatusPelanggan;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.base.TextField;
+import org.basic.dao.abst.DaoAbstract;
 
 
 

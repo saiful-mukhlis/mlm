@@ -1,30 +1,19 @@
 package com.basic.print.defaults;
 
-import java.awt.Color;
-import java.awt.Component;
-import java.awt.Window;
-import java.util.Collection;
-import java.util.List;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-
 import ar.com.fdvs.dj.domain.Style;
+import ar.com.fdvs.dj.domain.builders.ColumnBuilder;
 import ar.com.fdvs.dj.domain.builders.DynamicReportBuilder;
-
+import ar.com.fdvs.dj.domain.builders.StyleBuilder;
+import ar.com.fdvs.dj.domain.constants.*;
+import ar.com.fdvs.dj.domain.entities.columns.AbstractColumn;
 import com.basic.print.adapter.PrintAdapter;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
 
-import ar.com.fdvs.dj.domain.builders.ColumnBuilder;
-import ar.com.fdvs.dj.domain.builders.StyleBuilder;
-import ar.com.fdvs.dj.domain.constants.Border;
-import ar.com.fdvs.dj.domain.constants.Font;
-import ar.com.fdvs.dj.domain.constants.HorizontalAlign;
-import ar.com.fdvs.dj.domain.constants.Page;
-import ar.com.fdvs.dj.domain.constants.Transparency;
-import ar.com.fdvs.dj.domain.constants.VerticalAlign;
-import ar.com.fdvs.dj.domain.entities.columns.AbstractColumn;
+import javax.swing.*;
+import java.awt.*;
+import java.util.Collection;
+import java.util.List;
 
 public class PrintDefault extends PrintAdapter {
 

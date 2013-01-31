@@ -1,24 +1,5 @@
 package org.basic.comp.base;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Dialog.ModalityType;
-import java.awt.FlowLayout;
-import java.awt.Toolkit;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-
-import javax.swing.JDialog;
-import javax.swing.JPanel;
-
-import org.basic.comp.abst.WidgetPrivilege;
-import org.basic.comp.abst.WindowAbstract;
-import org.noos.xing.mydoggy.Content;
-import org.noos.xing.mydoggy.ContentManager;
-import org.noos.xing.mydoggy.mydoggyset.action.AddContentAction;
-import org.noos.xing.yasaf.plaf.action.ViewContextAction;
-
 import com.basic.comp.impl.master.GrpM;
 import com.basic.comp.impl.master.JenisPekerjaanM;
 import com.basic.comp.impl.master.UsrM;
@@ -29,6 +10,19 @@ import com.global.DataUser;
 import com.orientechnologies.orient.core.db.ODatabaseRecordThreadLocal;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.abst.WidgetPrivilege;
+import org.basic.comp.abst.WindowAbstract;
+import org.noos.xing.mydoggy.Content;
+import org.noos.xing.mydoggy.ContentManager;
+import org.noos.xing.mydoggy.mydoggyset.action.AddContentAction;
+import org.noos.xing.yasaf.plaf.action.ViewContextAction;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.Dialog.ModalityType;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class Window extends WindowAbstract{
 	

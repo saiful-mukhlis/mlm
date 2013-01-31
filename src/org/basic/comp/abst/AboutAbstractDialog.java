@@ -1,26 +1,18 @@
 package org.basic.comp.abst;
 
-import java.awt.BorderLayout;
-import java.awt.Component;
-import java.awt.Window;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSeparator;
-
-import org.basic.comp.adapter.AboutAdapter;
-
-import com.basic.lang.LApp;
 import com.basic.lang.LAbout;
+import com.basic.lang.LApp;
 import com.global.App;
 import com.jgoodies.forms.builder.ButtonBarBuilder2;
 import com.jgoodies.forms.builder.DefaultFormBuilder;
 import com.jgoodies.forms.layout.FormLayout;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.adapter.AboutAdapter;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public abstract class AboutAbstractDialog extends TitleAbstract implements AboutAdapter {
 	protected JPanel panel;

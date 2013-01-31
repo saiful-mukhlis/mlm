@@ -1,10 +1,8 @@
 package org.basic.comp.base;
 
-import java.awt.Color;
+import javax.swing.*;
+import java.awt.*;
 import java.util.Vector;
-
-import javax.swing.ComboBoxModel;
-import javax.swing.JComboBox;
 
 public class ComboBox extends JComboBox {
 

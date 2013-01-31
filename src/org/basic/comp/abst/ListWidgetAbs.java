@@ -1,6 +1,6 @@
 package org.basic.comp.abst;
 
-import javax.swing.JPanel;
+import javax.swing.*;
 
 public class ListWidgetAbs implements ListWidget {
 protected JPanel panel;

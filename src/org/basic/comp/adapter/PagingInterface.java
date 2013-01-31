@@ -1,8 +1,8 @@
 package org.basic.comp.adapter;
 
-import javax.swing.JPanel;
-
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+
+import javax.swing.*;
 
 public interface PagingInterface {
 public void loadFirst(ODatabaseDocumentTx db);

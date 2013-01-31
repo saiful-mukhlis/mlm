@@ -1,21 +1,14 @@
 package org.basic.comp.abst;
 
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
-import org.basic.comp.adapter.PagingInterface;
-import org.basic.comp.adapter.ParentPagingInterface;
-import org.basic.comp.adapter.TableModelInterface;
-
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.adapter.PagingInterface;
+import org.basic.comp.adapter.ParentPagingInterface;
+
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 
 public abstract class PagingAbstract implements PagingInterface {

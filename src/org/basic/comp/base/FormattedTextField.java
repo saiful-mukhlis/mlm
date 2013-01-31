@@ -1,15 +1,14 @@
 package org.basic.comp.base;
 
-import java.awt.Color;
+import com.global.App;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.text.Format;
-
-import javax.swing.JFormattedTextField;
-
-import com.global.App;
 
 public class FormattedTextField extends JFormattedTextField {
 

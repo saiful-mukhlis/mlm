@@ -1,35 +1,26 @@
 package org.basic.comp.base;
 
-import java.awt.BorderLayout;
+import com.basic.comp.model.DefaultTreeTableModel;
+import com.global.App;
+import com.global.DataUser;
+import com.jgoodies.looks.Options;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.adapter.DetailAdapter;
+import org.basic.comp.adapter.EfectWidget;
+import org.basic.comp.model.HakAksesTreeModel;
+import org.jdesktop.swingx.JXTreeTable;
+import org.jdesktop.swingx.decorator.HighlighterFactory;
+import org.jdesktop.swingx.treetable.DefaultMutableTreeTableNode;
+
+import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.List;
-
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
-import javax.swing.JPopupMenu;
-import javax.swing.JScrollPane;
-import javax.swing.ListSelectionModel;
-
-import org.basic.comp.adapter.DetailAdapter;
-import org.basic.comp.adapter.EfectWidget;
-import org.basic.comp.listener.MasterInterface;
-import org.basic.comp.model.HakAksesTreeModel;
-import org.jdesktop.swingx.JXTreeTable;
-import org.jdesktop.swingx.decorator.HighlighterFactory;
-import org.jdesktop.swingx.treetable.DefaultMutableTreeTableNode;
-
-import com.basic.comp.model.DefaultTreeTableModel;
-import com.basic.icon.IconBase;
-import com.basic.lang.LWindow;
-import com.global.App;
-import com.global.DataUser;
-import com.jgoodies.looks.Options;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import com.orientechnologies.orient.core.record.impl.ODocument;
 
 public class TreeHakAkses extends DetailAdapter {
 	public final static int WIDGET_1 = 0;

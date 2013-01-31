@@ -1,13 +1,5 @@
 package com.mlm.view.add;
 
-import org.basic.comp.abst.DialogDefault;
-import org.basic.comp.abst.FormBuilder;
-import org.basic.comp.base.ComboBox;
-import org.basic.comp.base.ScrollPane;
-import org.basic.comp.base.TextArea;
-import org.basic.comp.base.TextField;
-import org.basic.comp.model.ODocumentToString;
-
 import com.basic.lang.LPelanggan;
 import com.global.App;
 import com.jgoodies.forms.layout.FormLayout;
@@ -15,6 +7,13 @@ import com.mlm.comp.impl.master.PelangganM;
 import com.mlm.dao.impl.PelangganDao;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.abst.DialogDefault;
+import org.basic.comp.abst.FormBuilder;
+import org.basic.comp.base.ComboBox;
+import org.basic.comp.base.ScrollPane;
+import org.basic.comp.base.TextArea;
+import org.basic.comp.base.TextField;
+import org.basic.comp.model.ODocumentToString;
 
 public class PelangganDN extends DialogDefault {
 	protected TextField code;

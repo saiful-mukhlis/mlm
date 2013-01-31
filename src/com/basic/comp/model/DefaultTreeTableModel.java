@@ -1,8 +1,8 @@
 package com.basic.comp.model;
 
-import java.util.List;
-
 import org.jdesktop.swingx.treetable.TreeTableNode;
+
+import java.util.List;
 
 public class DefaultTreeTableModel extends org.jdesktop.swingx.treetable.DefaultTreeTableModel{
 	

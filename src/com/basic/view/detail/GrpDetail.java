@@ -1,18 +1,5 @@
 package com.basic.view.detail;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import javax.swing.JSplitPane;
-
-import org.basic.comp.abst.DetailAbs;
-import org.basic.comp.abst.FormBuilder;
-import org.basic.comp.base.ScrollPane;
-import org.basic.comp.base.TextArea;
-import org.basic.comp.base.TextField;
-import org.basic.comp.base.TreeHakAkses;
-
 import com.basic.entity.Grp;
 import com.basic.entity.Usr;
 import com.basic.lang.LGrp;
@@ -21,6 +8,17 @@ import com.global.App;
 import com.jgoodies.forms.layout.FormLayout;
 import com.mlm.comp.base.TreeHakAksesMlm;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.basic.comp.abst.DetailAbs;
+import org.basic.comp.abst.FormBuilder;
+import org.basic.comp.base.ScrollPane;
+import org.basic.comp.base.TextArea;
+import org.basic.comp.base.TextField;
+import org.basic.comp.base.TreeHakAkses;
+
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 public class GrpDetail extends DetailAbs{
 	protected TextField code;

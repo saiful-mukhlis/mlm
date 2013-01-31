@@ -1,15 +1,15 @@
 package org.basic.comp.abst;
 
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import org.noos.xing.mydoggy.*;
+import com.global.App;
+import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import org.noos.xing.mydoggy.Content;
+import org.noos.xing.mydoggy.ContentManager;
 import org.noos.xing.yasaf.view.ViewContextChangeListener;
 import org.noos.xing.yasaf.view.event.ViewContextChangeEvent;
 
-import com.global.App;
-import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class AddContentAction implements ActionListener,
 		ViewContextChangeListener {

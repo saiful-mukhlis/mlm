@@ -1,17 +1,10 @@
 package com.basic.print;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.swing.JPanel;
-
 import ar.com.fdvs.dj.domain.DynamicReport;
 import ar.com.fdvs.dj.domain.builders.DynamicReportBuilder;
 import ar.com.fdvs.dj.domain.constants.Page;
-import org.basic.comp.listener.LoadingAdapter;
-
 import com.basic.comp.impl.DialogLoading;
-import com.basic.comp.impl.master.UsrM;
+import com.basic.comp.impl.master.UsrMaster;
 import com.basic.db.FGrp;
 import com.basic.db.FJenisPekerjaan;
 import com.basic.db.FUsr;
@@ -21,6 +14,11 @@ import com.basic.print.model.UsrPM;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+import org.basic.comp.listener.LoadingAdapter;
+
+import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class UsrPrintAll extends PrintDefault {
@@ -133,7 +131,7 @@ public class UsrPrintAll extends PrintDefault {
 		ReportBese report=new ReportBese();
 		report.setDatas(datas);
 		report.setChildReport(childReport);
-		report.runPdf(db, panel, UsrM.TITLE);
+		report.runPdf(db, panel, UsrMaster.TITLE);
 	}
 	
 	public void runWord(final ODatabaseDocumentTx db) {
@@ -147,7 +145,7 @@ public class UsrPrintAll extends PrintDefault {
 		ReportBese report=new ReportBese();
 		report.setDatas(datas);
 		report.setChildReport(childReport);
-		report.runWord(db, panel, UsrM.TITLE);
+		report.runWord(db, panel, UsrMaster.TITLE);
 	}
 	
 	public void runExcel(final ODatabaseDocumentTx db) {
@@ -161,7 +159,7 @@ public class UsrPrintAll extends PrintDefault {
 		ReportBese report=new ReportBese();
 		report.setDatas(datas);
 		report.setChildReport(childReport);
-		report.runExcel(db, panel, UsrM.TITLE);
+		report.runExcel(db, panel, UsrMaster.TITLE);
 	}
 	
 	

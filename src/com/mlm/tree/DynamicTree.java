@@ -1,27 +1,11 @@
 package com.mlm.tree;
 
-import java.awt.BorderLayout;
-import java.awt.Graphics;
-import java.awt.Insets;
-import java.awt.Rectangle;
-
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTree;
-import javax.swing.UIManager;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.DefaultTreeCellRenderer;
-import javax.swing.tree.DefaultTreeModel;
-import javax.swing.tree.MutableTreeNode;
-import javax.swing.tree.TreePath;
-import javax.swing.tree.TreeSelectionModel;
-
+import com.global.App;
 import org.jdesktop.swingx.JXTree;
 
-import com.basic.icon.IconBase;
-import com.global.App;
+import javax.swing.*;
+import javax.swing.tree.*;
+import java.awt.*;
 
 
 public class DynamicTree {
