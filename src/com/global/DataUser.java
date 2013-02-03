@@ -1,10 +1,13 @@
 package com.global;
 
 
+import org.basic.comp.base.LoginDialog;
+
 import com.basic.comp.impl.master.GrpMaster;
 import com.basic.comp.impl.master.JenisPekerjaanMaster;
 import com.basic.comp.impl.master.UsrMaster;
 import com.basic.db.FGrp;
+import com.basic.lang.LApp;
 import com.mlm.comp.impl.master.PaketM;
 import com.mlm.comp.impl.master.PelangganM;
 import com.orientechnologies.orient.core.record.impl.ODocument;
@@ -129,6 +132,11 @@ public class DataUser {
 	 * @return User
 	 */
 	public static synchronized ODocument getUsr() {
+		while (usr==null) {
+			LoginDialog form = new LoginDialog();
+			form.build();
+			App.showDialog(null, form.getPanel());
+		}
 		return usr;
 	}
 	

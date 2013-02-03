@@ -31,8 +31,10 @@ public class LApp {
 
 	
 	public static char EXIT_MNEMONIC=App.getT("E").charAt(0);
+	public static char LOGIN_MNEMONIC=App.getT("L").charAt(0);
 
 	public static String EXIT_DESC=App.getT("Exit from Application");
+	public static String LOGIN_DESC=App.getT("Login");
 	
 	
 	

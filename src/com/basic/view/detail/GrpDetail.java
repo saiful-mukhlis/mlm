@@ -125,8 +125,8 @@ public class GrpDetail extends DetailAbs{
 		c.append("10px,f:0px:g,10px,");
 		
 		r.append("3dlu,");
-		r.append("p,3dlu,");
-		r.append("p,3dlu,");
+		r.append("f:p,3dlu,");
+		r.append("f:p,3dlu,");
 		FormLayout layout=new FormLayout(c.toString(), r.toString());
 		FormBuilder builder=new FormBuilder(layout);
 		

@@ -1,6 +1,7 @@
 package org.basic.comp.base;
 
 import com.basic.comp.model.DefaultTreeTableModel;
+import com.basic.icon.IconBase;
 import com.global.App;
 import com.global.DataUser;
 import com.jgoodies.looks.Options;
@@ -14,6 +15,7 @@ import org.jdesktop.swingx.decorator.HighlighterFactory;
 import org.jdesktop.swingx.treetable.DefaultMutableTreeTableNode;
 
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -42,6 +44,12 @@ public class TreeHakAkses extends DetailAdapter {
 	public void setLayout() {
 		JScrollPane ss = new JScrollPane(treeTable);
 		ss.setBorder(App.borderWhite);
+		
+		JLabel label=new  JLabel();
+		label.setHorizontalAlignment(JLabel.CENTER);
+		label.setBorder(App.borderBlackBottom5555b);
+		label.setText(App.getT("Privilege"));
+		panel.add(label, BorderLayout.NORTH);
 		panel.add(ss, BorderLayout.CENTER);
 	}
 

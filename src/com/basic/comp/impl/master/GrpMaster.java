@@ -6,6 +6,7 @@ import com.basic.view.detail.GrpDetail;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.basic.comp.abst.MasterAbs;
+import org.basic.comp.abst.WidgetAddObj;
 import org.basic.comp.abst.WidgetChangeObj;
 import org.basic.comp.base.impl.ToolbarSmallCRUDS;
 
@@ -40,6 +41,7 @@ public class GrpMaster extends MasterAbs {
 		toolbarSmall = new ToolbarSmallCRUDS();
 		addDialog=new GrpDN();
 		listWidget=new GrpTable();
+		
 		detail=new GrpDetail();
 	}
 	
@@ -51,6 +53,7 @@ public class GrpMaster extends MasterAbs {
 		toolbarSmall.setMaster(this);
 		listWidget.addWidgetChange((WidgetChangeObj) detail);
 		super.build(db);
+		
 	}
 
 

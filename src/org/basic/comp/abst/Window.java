@@ -91,4 +91,6 @@ public interface Window {
 	
 	HashMap<String, Master> getMapMaster();
 
+	void changePrivilege();
+
 }

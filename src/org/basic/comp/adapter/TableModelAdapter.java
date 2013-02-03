@@ -3,6 +3,8 @@ package org.basic.comp.adapter;
 
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import com.orientechnologies.orient.core.record.impl.ODocument;
+
+import org.basic.comp.abst.WidgetAddObj;
 import org.basic.comp.base.SplitButton;
 import org.basic.comp.base.TextFieldSearch;
 import org.basic.dao.adapter.DaoInterface;
@@ -10,7 +12,7 @@ import org.basic.dao.adapter.DaoInterface;
 import javax.swing.table.AbstractTableModel;
 import java.util.List;
 
-public class TableModelAdapter extends AbstractTableModel implements TableModelInterface, ParentPagingInterface {
+public class TableModelAdapter extends AbstractTableModel implements TableModelInterface, ParentPagingInterface, WidgetAddObj {
 
 	@Override
 	public int getRowCount() {
@@ -31,7 +33,7 @@ public class TableModelAdapter extends AbstractTableModel implements TableModelI
 	}
 
 	@Override
-	public void addModel(ODocument model) {
+	public void addObj(Object model) {
 		// TODO Auto-generated method stub
 		
 	}

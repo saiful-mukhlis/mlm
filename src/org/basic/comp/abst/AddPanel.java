@@ -23,5 +23,7 @@ public interface AddPanel {
 	void setMaster(Master master);
 	
 	void requestDefaultFocus();
+	
+	void addParent(WidgetAddObj widget);
 
 }

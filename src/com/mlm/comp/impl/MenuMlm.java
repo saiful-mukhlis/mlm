@@ -40,7 +40,7 @@ public class MenuMlm extends MenuAbs {
 		master.add(App.getActions().get(GrpMaster.ID_MASTER));
 		master.add(App.getActions().get(UsrMaster.ID_MASTER));
 		master.add(App.getActions().get(JenisPekerjaanMaster.ID_MASTER));
-
+		
 		menuBar.add(master);
 	}
 

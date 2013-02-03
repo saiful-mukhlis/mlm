@@ -10,7 +10,7 @@ import javax.swing.table.TableModel;
 import java.util.List;
 
 public interface TableModelInterface extends TableModel {
-	public void addModel(ODocument model);
+//	public void addModel(ODocument model);
 
 	public void editModel(ODocument model, int index);
 

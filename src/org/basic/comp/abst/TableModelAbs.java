@@ -127,6 +127,7 @@ public class TableModelAbs extends TableModelAdapter implements TableModel {
 
 	@Override
 	public void addModel(Object model) {
+		models.add(model);
 		fireTableDataChanged();
 	}
 
@@ -160,5 +161,13 @@ public class TableModelAbs extends TableModelAdapter implements TableModel {
 		models.remove(i);
 		fireTableDataChanged();
 	}
+
+	@Override
+	public void addObj(Object model) {
+		models.add(model);
+		fireTableDataChanged();
+	}
+	
+	
 
 }

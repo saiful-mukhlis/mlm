@@ -78,6 +78,7 @@ public class App {
 	public static Border borderWhite = BorderFactory.createLineBorder(Color.WHITE);
 	public static Border borderBlack = BorderFactory.createLineBorder(App.blacksmoot);
 	public static Border borderBlackBottom5555 = BorderFactory.createCompoundBorder(BorderFactory.createMatteBorder(0, 0, 0, 0, App.blacksmoot), BorderFactory.createEmptyBorder(5, 5, 5, 5));
+	public static Border borderBlackBottom5555b = BorderFactory.createCompoundBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, App.blacksmoot), BorderFactory.createEmptyBorder(5, 5, 5, 5));
 	public static Border borderBlackBottom3000 = BorderFactory.createCompoundBorder(BorderFactory.createMatteBorder(0, 0, 1, 0, App.blacksmoot), BorderFactory.createEmptyBorder(3, 0, 0, 0));
 	
 	public static Border borderBlackKananKiri = BorderFactory.createMatteBorder(0, 1, 0, 1, App.blacksmoot);

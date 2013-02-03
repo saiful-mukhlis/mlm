@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClassDiagram>
+    <Class name="org.basic.comp.abst.AddContentAction" x="102" y="1092">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association destinationClassName="org.basic.comp.abst.Master"
+            endpointName="master" kind="Simple"/>
+        <Communication destinationClassName="org.basic.comp.abst.Master"/>
+    </Class>
+    <Class name="org.basic.comp.abst.WindowAbs" x="-649" y="153">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.Window"/>
+        <Association destinationClassName="org.basic.comp.abst.Toolbar"
+            endpointName="toolbar" kind="Simple"/>
+        <Association destinationClassName="org.basic.comp.abst.Master"
+            endpointName="mapMaster" kind="Simple"/>
+        <Association
+            destinationClassName="org.basic.comp.abst.WidgetPrivilege"
+            endpointName="widgetPrivileges" kind="Simple"/>
+        <Association destinationClassName="org.basic.comp.abst.Master"
+            endpointName="masterOpen" kind="Simple"/>
+        <Association destinationClassName="org.basic.comp.abst.Menu"
+            endpointName="menu" kind="Simple"/>
+        <Association destinationClassName="org.basic.comp.abst.Master"
+            endpointName="masters" kind="Simple"/>
+        <Communication destinationClassName="org.basic.comp.abst.Menu"/>
+        <Communication destinationClassName="org.basic.comp.abst.WidgetPrivilege"/>
+        <Communication destinationClassName="org.basic.comp.abst.Toolbar"/>
+    </Class>
+    <Class name="org.basic.comp.abst.TableNoLoadAbstract" x="-366" y="2243">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.TableModelAbs" x="383" y="1204">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.TableModel"/>
+        <Association
+            destinationClassName="org.basic.comp.abst.ListWidget"
+            endpointName="listWidget" kind="Simple"/>
+        <Association destinationClassName="org.basic.comp.abst.Paging"
+            endpointName="paging" kind="Simple"/>
+        <Communication destinationClassName="org.basic.comp.abst.Paging"/>
+    </Class>
+    <Class name="org.basic.comp.abst.PagingAbstract" x="-28" y="2259">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.EditPanelAbs" x="-723" y="1020">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.EditPanel"/>
+        <Association
+            destinationClassName="org.basic.comp.abst.WidgetEditObj"
+            endpointName="widgetEditObjs" kind="Simple"/>
+        <Association destinationClassName="org.basic.comp.abst.Master"
+            endpointName="master" kind="Simple"/>
+        <Communication destinationClassName="org.basic.comp.abst.Master"/>
+        <Communication destinationClassName="org.basic.comp.abst.FormBuilder"/>
+        <Communication destinationClassName="org.basic.comp.abst.WidgetEditObj"/>
+    </Class>
+    <Class name="org.basic.comp.abst.TitleAbstract" x="2000" y="3062">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.EditPanel" x="-233" y="1006">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.mlm.comp.impl.WindowMlm" x="-785" y="680">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.WindowAbs"/>
+        <Communication destinationClassName="org.basic.comp.abst.WindowAbs"/>
+        <Communication destinationClassName="org.basic.comp.abst.MasterAbs"/>
+    </Class>
+    <Class name="org.basic.comp.abst.Menu" x="-57" y="269">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.DialogEditDefault" x="2591" y="2519">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.DialogDefault"/>
+        <Communication destinationClassName="org.basic.comp.abst.DialogDefault"/>
+    </Class>
+    <Class name="org.basic.comp.abst.AddPanel" x="1170" y="908">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.PagingAbs" x="313" y="1474">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.Paging"/>
+        <Association
+            destinationClassName="org.basic.comp.abst.TableModel"
+            endpointName="tableModel" kind="Simple"/>
+        <Communication destinationClassName="org.basic.comp.abst.TableModel"/>
+    </Class>
+    <Class name="org.basic.comp.abst.TableModelSearchAbstract" x="268" y="2884">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.MenuAbs" x="221" y="145">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.Menu"/>
+        <Association destinationClassName="org.basic.comp.abst.Window"
+            endpointName="window" kind="Simple"/>
+    </Class>
+    <Class name="org.basic.comp.abst.WidgetChangeObj" x="247" y="474">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.DetailAbstract" x="1494" y="3103">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="org.basic.comp.abst.FormBuilder"
+            endpointName="builder" kind="Simple"/>
+    </Class>
+    <Class name="org.basic.comp.abst.Window" x="-240" y="54">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.MasterAbs" x="-280" y="376">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.Master"/>
+        <Association
+            destinationClassName="org.basic.comp.abst.ToolbarSmall"
+            endpointName="toolbarSmall" kind="Simple"/>
+        <Association destinationClassName="org.basic.comp.abst.Detail"
+            endpointName="detail" kind="Simple"/>
+        <Association destinationClassName="org.basic.comp.abst.AddPanel"
+            endpointName="addDialog" kind="Simple"/>
+        <Association destinationClassName="org.basic.comp.abst.Window"
+            endpointName="window" kind="Simple"/>
+        <Association
+            destinationClassName="org.basic.comp.abst.FactorySearch"
+            endpointName="factorySearch" kind="Simple"/>
+        <Association
+            destinationClassName="org.basic.comp.abst.ListWidget"
+            endpointName="listWidget" kind="Simple"/>
+        <Association
+            destinationClassName="org.basic.comp.abst.EditPanel"
+            endpointName="editDialog" kind="Simple"/>
+        <Communication destinationClassName="org.basic.comp.abst.Window"/>
+        <Communication destinationClassName="org.basic.comp.abst.Detail"/>
+        <Communication destinationClassName="org.basic.comp.abst.AddPanel"/>
+        <Communication destinationClassName="org.basic.comp.abst.ListWidget"/>
+        <Communication destinationClassName="org.basic.comp.abst.ToolbarSmall"/>
+    </Class>
+    <Class name="org.basic.comp.abst.Paging" x="768" y="1763">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.Detail" x="104" y="1204">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.FactorySearch" x="987" y="1582">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.WidgetEditObj" x="-170" y="1342">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.ToolbarSmall" x="239" y="920">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.basic.comp.impl.DialogLoading" x="-144" y="2807">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="com.basic.comp.impl.NamaBulan" x="1187" y="2640">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.MasterTable" x="680" y="2231">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.TableAbs" x="399" y="533">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.ListWidget"/>
+        <Association
+            destinationClassName="org.basic.comp.abst.TableModel"
+            endpointName="tableModel" kind="Simple"/>
+        <Association
+            destinationClassName="org.basic.comp.abst.WidgetChangeObj"
+            endpointName="widgetChangeObjs" kind="Simple"/>
+        <Association destinationClassName="org.basic.comp.abst.Master"
+            endpointName="master" kind="Simple"/>
+        <Communication destinationClassName="org.basic.comp.abst.TableModel"/>
+        <Communication destinationClassName="org.basic.comp.abst.WidgetChangeObj"/>
+    </Class>
+    <Class name="org.basic.comp.abst.AddPanelAbs" x="802" y="632">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.AddPanel"/>
+        <Association
+            destinationClassName="org.basic.comp.abst.WidgetAddObj"
+            endpointName="widgetAddObjs" kind="Simple"/>
+        <Association destinationClassName="org.basic.comp.abst.Master"
+            endpointName="master" kind="Simple"/>
+        <Communication destinationClassName="org.basic.comp.abst.Master"/>
+        <Communication destinationClassName="org.basic.comp.abst.FormBuilder"/>
+        <Communication destinationClassName="org.basic.comp.abst.WidgetAddObj"/>
+    </Class>
+    <Class name="org.basic.comp.abst.WidgetPrivilege" x="-919" y="460">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.FormBuilder" x="1630" y="2706">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.WindowAbstract" x="-1545" y="372">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Association
+            destinationClassName="org.basic.comp.abst.WidgetPrivilege"
+            endpointName="cangeHakAkses" kind="Simple"/>
+    </Class>
+    <Class name="org.basic.comp.abst.ToolbarSmallAbs" x="229" y="985">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.ToolbarSmall"/>
+    </Class>
+    <Class name="org.basic.comp.abst.DetailAbs" x="93" y="605">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.Detail"/>
+        <Extension destinationClassName="org.basic.comp.abst.WidgetChangeObj"/>
+        <Association destinationClassName="org.basic.comp.abst.Master"
+            endpointName="master" kind="Simple"/>
+    </Class>
+    <Class name="org.basic.comp.abst.TableModel" x="434" y="1063">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.MasterDefault" x="-724" y="2249">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.Toolbar" x="-612" y="-6">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.AboutAbstractDialog" x="2111" y="2630">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.TitleAbstract"/>
+    </Class>
+    <Class name="org.basic.comp.abst.TableModelDefault" x="-745" y="2804">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.TableDefault" x="331" y="2242">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.ToolbarAbs" x="-332" y="-129">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.Toolbar"/>
+        <Association destinationClassName="org.basic.comp.abst.Window"
+            endpointName="window" kind="Simple"/>
+    </Class>
+    <Class name="org.basic.comp.abst.ListWidgetAbs" x="670" y="904">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Extension destinationClassName="org.basic.comp.abst.ListWidget"/>
+    </Class>
+    <Class name="org.basic.comp.abst.Master" x="-475" y="843">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.WidgetAddObj" x="1174" y="1094">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+    <Class name="org.basic.comp.abst.DialogDefault" x="2498" y="2828">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+        <Communication destinationClassName="org.basic.comp.abst.FormBuilder"/>
+    </Class>
+    <Class name="org.basic.comp.abst.ListWidget" x="568" y="1010">
+        <AttributesDisplayFilter public-accepted="true"
+            private-accepted="true" protected-accepted="true"
+            default-accepted="true" static-accepted="false"/>
+        <MethodDisplayFilter public-accepted="true"
+            private-accepted="false" protected-accepted="false"
+            default-accepted="false" static-accepted="false"
+            accessors-accepted="false" constructors-accepted="false"/>
+    </Class>
+</ClassDiagram>

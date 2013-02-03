@@ -116,6 +116,7 @@ public class GrpDN extends AddPanelAbs {
 		
 		
 		d.save(db, g.getDoc());
+		model=g;
 	}
 
 	@Override

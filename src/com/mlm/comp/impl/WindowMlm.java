@@ -2,10 +2,12 @@ package com.mlm.comp.impl;
 
 import javax.swing.JPanel;
 
+import com.basic.comp.impl.action.LoginAction;
 import com.basic.comp.impl.master.GrpMaster;
 import com.basic.comp.impl.master.JenisPekerjaanMaster;
 import com.basic.comp.impl.master.UsrMaster;
 import com.basic.icon.IconBase;
+import com.basic.lang.LApp;
 import com.basic.lang.LWindow;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
@@ -52,6 +54,11 @@ public class WindowMlm extends WindowAbs {
 		viewContext.addViewContextChangeListener((ViewContextChangeListener) App.getActions().get(JenisPekerjaanMaster.ID_MASTER));
 		super.build(db);
 		showWelcome();
+		
+		
+		// ============================
+		LoginAction loginAction=new LoginAction(this);
+		App.getActions().put(LApp.LOGIN, loginAction);
 	}
 	
 	

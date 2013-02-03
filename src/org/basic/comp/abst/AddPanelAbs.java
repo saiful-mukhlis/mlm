@@ -29,7 +29,7 @@ public class AddPanelAbs implements AddPanel {
 	protected JPanel panelButton;
 	protected ScrollPane pane;
 
-	protected List<WidgetAddObj> widgetAddObjs;
+	protected List<WidgetAddObj> widgetAddObjs=new ArrayList<>();
 
 	protected JButton save;
 	protected JButton reset;
@@ -259,6 +259,11 @@ public class AddPanelAbs implements AddPanel {
 	@Override
 	public void requestDefaultFocus() {
 		
+	}
+
+	@Override
+	public void addParent(WidgetAddObj widget) {
+		widgetAddObjs.add(widget);
 	}
 
 }

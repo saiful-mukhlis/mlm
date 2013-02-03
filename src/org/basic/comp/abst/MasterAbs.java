@@ -60,6 +60,7 @@ public class MasterAbs implements Master {
 
 	public void build(ODatabaseDocumentTx db) {
 		addDialog.setMaster(this);
+		addDialog.addParent((WidgetAddObj) listWidget.getTableModel());
 		Double tmp=App.getW()*lebar;
 		devide=tmp.intValue();
 		
@@ -157,6 +158,7 @@ public class MasterAbs implements Master {
 	public void actionAdd() {
 		if (!addDialog.isBuilded()) {
 			ODatabaseDocumentTx db=App.getDbdLocal();
+			addDialog.init();
 			addDialog.build(db);
 			db.close();
 		}
@@ -348,6 +350,12 @@ public class MasterAbs implements Master {
 		
 		panel.add(toolbarSmall.getPanel(), BorderLayout.NORTH);
 		panel.add(splitPane, BorderLayout.CENTER);
+		
+
+		if (addDialog==null) {
+			System.out.println("Asdfasdf");
+		}
+		
 	}
 
 	@Override

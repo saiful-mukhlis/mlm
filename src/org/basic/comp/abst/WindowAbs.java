@@ -350,7 +350,7 @@ public class WindowAbs implements Window {
 		DataUser.setAkses();
 		changePrivilege();
 	}
-	
+	@Override
 	public void changePrivilege(){
 		for (WidgetPrivilege w : widgetPrivileges) {
 			if (w!=null) {
