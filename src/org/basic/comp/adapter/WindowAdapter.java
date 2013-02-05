@@ -130,7 +130,7 @@ public class WindowAdapter implements WindowInterfaces{
 	}
 
 	@Override
-	public ToolbarAdapter getToolbar() {
+	public ToolbarInterfaces getToolbar() {
 		// TODO Auto-generated method stub
 		return null;
 	}

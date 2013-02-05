@@ -1,13 +1,10 @@
 package org.basic.comp.base;
 
-import com.basic.comp.impl.master.GrpM;
-import com.basic.comp.impl.master.UsrM;
 import com.basic.lang.LApp;
 import com.global.App;
 import com.global.DataUser;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import org.basic.comp.adapter.ToolbarAdapter;
-import org.basic.comp.adapter.WindowInterfaces;
+import org.basic.comp.adapter.ToolbarInterfaces;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +15,7 @@ import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Toolbar implements ToolbarAdapter{
+public class Toolbar implements ToolbarInterfaces{
 	protected JToolBar toolBar1;
 	protected JToolBar toolBar2;
 	protected JToolBar toolBar3;
