@@ -37,6 +37,7 @@ public class LApp {
 	public static String LOGIN_DESC=App.getT("Login");
 	
 	
+	public static String SHOW_WELCOME=App.getT("Welcome");
 	
 	
 	public static String LOADING=App.getT("Loading.........");

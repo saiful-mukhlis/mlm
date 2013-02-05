@@ -4,11 +4,8 @@ import com.basic.comp.impl.action.ExitAction;
 import com.basic.lang.LApp;
 import com.basic.lang.LWindow;
 import com.global.App;
-import com.global.DataUser;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 
-import org.basic.comp.adapter.ToolbarInterfaces;
-import org.basic.comp.base.LoginDialog;
 import org.basic.comp.base.PanelBottom;
 import org.basic.comp.listener.WidgetInterface;
 import org.noos.xing.mydoggy.Content;
@@ -20,16 +17,15 @@ import org.noos.xing.mydoggy.mydoggyset.action.AddContentAction;
 import org.noos.xing.mydoggy.plaf.MyDoggyToolWindowManager;
 import org.noos.xing.mydoggy.plaf.ui.cmp.ExtendedTableLayout;
 import org.noos.xing.yasaf.plaf.action.ViewContextAction;
-import org.noos.xing.yasaf.plaf.view.MapViewContext;
-import org.noos.xing.yasaf.view.ViewContext;
 
 import javax.swing.*;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class WindowAbstract implements WindowInterfaces, WidgetInterface {
+public class WindowAbstract implements WindowInterfaces {
 	protected WidgetInterface toolbar;
 	protected MenuInterfaces menu; 
 	protected WidgetInterface panelButton;
@@ -52,7 +48,6 @@ public class WindowAbstract implements WindowInterfaces, WidgetInterface {
 	
 	protected List<WidgetPrivilege> widgetPrivileges=new ArrayList<>();
 
-	@Override
 	public void init() {
 		toolWindowManager = new MyDoggyToolWindowManager();
 		((MyDoggyToolWindowManager)toolWindowManager).getMainContainer().setBackground(Color.WHITE);
@@ -68,7 +63,6 @@ public class WindowAbstract implements WindowInterfaces, WidgetInterface {
 //		masters=new ArrayList<>();
 	}
 
-	@Override
 	public void build(ODatabaseDocumentTx db) {
 
 		menu.build(db);
@@ -101,7 +95,7 @@ public class WindowAbstract implements WindowInterfaces, WidgetInterface {
 						}
 						if (toolWindowManager.getContentManager()
 								.getContentCount() == 0) {
-							showWelcome();
+							App.getActions().get(LApp.SHOW_WELCOME).actionPerformed(null);
 						}
 					}
 
@@ -153,114 +147,7 @@ public class WindowAbstract implements WindowInterfaces, WidgetInterface {
 
 	
 
-	@Override
-	public void showWelcome() {
-		welcomeAca.actionPerformed(null);
-//		viewContext.put(UsrMaster.ID_MASTER, null);
-	}
-
-	// GETER AND SETTER
-
-	@Override
-	public Toolbar getToolbar() {
-		return toolbar;
-	}
-
-	@Override
-	public void setToolbar(Toolbar toolbar) {
-		this.toolbar = toolbar;
-	}
-
-	@Override
-	public MenuInterfaces getMenu() {
-		return menu;
-	}
-
-	@Override
-	public void setMenu(MenuInterfaces menu) {
-		this.menu = menu;
-	}
-
-	@Override
-	public ToolWindowManager getToolWindowManager() {
-		return toolWindowManager;
-	}
-
-	@Override
-	public void setToolWindowManager(ToolWindowManager toolWindowManager) {
-		this.toolWindowManager = toolWindowManager;
-	}
-
-	@Override
-	public ViewContext getViewContext() {
-		return viewContext;
-	}
-
-	@Override
-	public void setViewContext(ViewContext viewContext) {
-		this.viewContext = viewContext;
-	}
-
-	@Override
-	public JFrame getFrame() {
-		return frame;
-	}
-
-	@Override
-	public void setFrame(JFrame frame) {
-		this.frame = frame;
-	}
-
-	@Override
-	public PanelBottom getPanelBottom() {
-		return panelBottom;
-	}
-
-	@Override
-	public void setPanelBottom(PanelBottom panelBottom) {
-		this.panelBottom = panelBottom;
-	}
-
-	@Override
-	public JProgressBar getProgressBar() {
-		return progressBar;
-	}
-
-	@Override
-	public void setProgressBar(JProgressBar progressBar) {
-		this.useProgressBar = true;
-		this.progressBar = progressBar;
-	}
-
-	@Override
-	public boolean isUseProgressBar() {
-		return useProgressBar;
-	}
-
-	@Override
-	public void setUseProgressBar(boolean useProgressBar) {
-		this.useProgressBar = useProgressBar;
-	}
-
-	@Override
-	public List getWidgetProtects() {
-		return widgetProtects;
-	}
-
-	@Override
-	public void setWidgetProtects(List widgetProtects) {
-		this.widgetProtects = widgetProtects;
-	}
-
-//	@Override
-//	public List getMasters() {
-//		return masters;
-//	}
-//
-//	@Override
-//	public void setMasters(List masters) {
-//		this.masters = masters;
-//	}
+	
 
 	@Override
 	public String getIdMasterOpen() {
@@ -272,30 +159,7 @@ public class WindowAbstract implements WindowInterfaces, WidgetInterface {
 		this.idMasterOpen = idMasterOpen;
 	}
 
-	@Override
-	public void actionLogin() {
-		if (DataUser.getUsr() == null) {
-			LoginDialog form = new LoginDialog();
-			form.build();
-			App.showDialog(frame, form.getPanel());
-		} else {
-			//logout
-			DataUser.setUsr(null);
-			DataUser.setGrp(null);
-			toolWindowManager.getContentManager().removeAllContents();
-			
-		}
-		DataUser.setAkses();
-		changePrivilege();
-	}
-	@Override
-	public void changePrivilege(){
-		for (WidgetPrivilege w : widgetPrivileges) {
-			if (w!=null) {
-				w.changePrivilege();
-			}
-		}
-	}
+	
 
 	public HashMap<String, Master> getMapMaster() {
 		return mapMaster;
@@ -304,6 +168,8 @@ public class WindowAbstract implements WindowInterfaces, WidgetInterface {
 	public void setMapMaster(HashMap<String, Master> mapMaster) {
 		this.mapMaster = mapMaster;
 	}
+
+
 	
 	
 

@@ -8,6 +8,7 @@ import javax.swing.KeyStroke;
 import org.basic.comp.abst.Master;
 import org.noos.xing.mydoggy.Content;
 import org.noos.xing.mydoggy.ContentManager;
+import org.noos.xing.mydoggy.ToolWindowManager;
 import org.noos.xing.yasaf.view.ViewContext;
 import org.noos.xing.yasaf.view.ViewContextChangeListener;
 import org.noos.xing.yasaf.view.event.ViewContextChangeEvent;
@@ -20,13 +21,15 @@ import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 public class ViewMasterAction extends AbstractAction implements ViewContextChangeListener{
 
 	private Master master;
+	private ToolWindowManager toolWindowManager;
 	private ViewContext viewContext;
 	private Object key;
 	private Object enableKey;
 	
-	public ViewMasterAction(Master master, ViewContext viewContext, Object key) {
+	public ViewMasterAction(Master master, ToolWindowManager toolWindowManager, ViewContext viewContext, Object key) {
         super(master.getTitleAction(), master.getIcon16());
         this.master=master;
+        this.toolWindowManager=toolWindowManager;
         putValue(SHORT_DESCRIPTION, master.getDescAction());  
         putValue(MNEMONIC_KEY, master.getMnemonic());
         putValue(ACCELERATOR_KEY, master.getKeyStroke());
@@ -37,7 +40,7 @@ public class ViewMasterAction extends AbstractAction implements ViewContextChang
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
-		ContentManager contentManager = master.getWindow().getToolWindowManager().getContentManager();
+		ContentManager contentManager = toolWindowManager.getContentManager();
 		Content content = contentManager.getContent(master.getIdMaster());
 		if (content == null) {
 			if (!master.isBuilded()) {
