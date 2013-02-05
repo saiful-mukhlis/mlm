@@ -17,7 +17,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
-public class MenuAbs implements Menu {
+public class MenuAbs implements MenuInterfaces {
 	protected JMenuBar menuBar;
 	protected WindowInterfaces window;
 	protected JMenu file;

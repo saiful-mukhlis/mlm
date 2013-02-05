@@ -6,6 +6,8 @@ import com.basic.lang.LWindow;
 import com.global.App;
 import com.global.DataUser;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
+
+import org.basic.comp.adapter.ToolbarInterfaces;
 import org.basic.comp.base.LoginDialog;
 import org.basic.comp.base.PanelBottom;
 import org.noos.xing.mydoggy.Content;
@@ -27,8 +29,8 @@ import java.util.HashMap;
 import java.util.List;
 
 public class WindowAbs implements WindowInterfaces {
-	protected Toolbar toolbar;
-	protected Menu menu;
+	protected ToolbarInterfaces toolbar;
+	protected MenuInterfaces menu;
 	protected ToolWindowManager toolWindowManager;
 	protected ViewContext viewContext;
 	protected JFrame frame;
@@ -234,12 +236,12 @@ public class WindowAbs implements WindowInterfaces {
 	}
 
 	@Override
-	public Menu getMenu() {
+	public MenuInterfaces getMenu() {
 		return menu;
 	}
 
 	@Override
-	public void setMenu(Menu menu) {
+	public void setMenu(MenuInterfaces menu) {
 		this.menu = menu;
 	}
 

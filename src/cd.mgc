@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ClassDiagram>
-    <Class name="org.basic.comp.abst.WindowAbs" x="-696" y="117">
+    <Class name="org.basic.comp.abst.WindowAbs" x="-630" y="68">
         <AttributesDisplayFilter public-accepted="true"
             private-accepted="true" protected-accepted="true"
             default-accepted="true" static-accepted="false"/>
