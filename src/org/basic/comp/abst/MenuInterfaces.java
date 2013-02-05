@@ -2,7 +2,9 @@ package org.basic.comp.abst;
 
 import javax.swing.*;
 
-public interface MenuInterfaces {
+import org.basic.comp.listener.WidgetInterface;
+
+public interface MenuInterfaces extends WidgetInterface {
 
 	JMenuBar getMenuBar();
 	

@@ -11,12 +11,12 @@ import com.basic.lang.LApp;
 import com.basic.lang.LWindow;
 import com.global.App;
 import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
-import org.basic.comp.abst.WindowAbs;
+import org.basic.comp.abst.WindowAbstract;
 import org.noos.xing.mydoggy.mydoggyset.action.AddContentAction;
 import org.noos.xing.yasaf.plaf.action.ViewContextAction;
 import org.noos.xing.yasaf.view.ViewContextChangeListener;
 
-public class WindowMlm extends WindowAbs {
+public class WindowMlm extends WindowAbstract {
 	@Override
 	public void init() {
 		super.init();

@@ -10,6 +10,7 @@ import com.orientechnologies.orient.core.db.document.ODatabaseDocumentTx;
 import org.basic.comp.adapter.ToolbarInterfaces;
 import org.basic.comp.base.LoginDialog;
 import org.basic.comp.base.PanelBottom;
+import org.basic.comp.listener.WidgetInterface;
 import org.noos.xing.mydoggy.Content;
 import org.noos.xing.mydoggy.ContentManagerListener;
 import org.noos.xing.mydoggy.ToolWindow;
@@ -28,11 +29,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class WindowAbs implements WindowInterfaces {
-	protected ToolbarInterfaces toolbar;
-	protected MenuInterfaces menu;
+public class WindowAbstract implements WindowInterfaces, WidgetInterface {
+	protected WidgetInterface toolbar;
+	protected MenuInterfaces menu; 
+	protected WidgetInterface panelButton;
 	protected ToolWindowManager toolWindowManager;
-	protected ViewContext viewContext;
 	protected JFrame frame;
 	protected PanelBottom panelBottom;
 	protected JProgressBar progressBar;
@@ -59,8 +60,8 @@ public class WindowAbs implements WindowInterfaces {
 		frame = new JFrame();
 		
 		panelBottom = new PanelBottom();
-		viewContext=new MapViewContext();
 		
+		// aksi
 		ExitAction exit=new ExitAction();
 		App.getActions().put("exit", exit);
 		
@@ -69,8 +70,6 @@ public class WindowAbs implements WindowInterfaces {
 
 	@Override
 	public void build(ODatabaseDocumentTx db) {
-		menu.setWindow(this);
-		toolbar.setWindow(this);
 
 		menu.build(db);
 		toolbar.build(db);
@@ -152,70 +151,7 @@ public class WindowAbs implements WindowInterfaces {
 		frame.getContentPane().add(p2, BorderLayout.SOUTH);
 	}
 
-	@Override
-	public void actionPrint() {
-
-	}
-
-	@Override
-	public void actionPdf() {
-
-	}
-
-	@Override
-	public void actionAdd() {
-
-	}
-
-	@Override
-	public void actionEdit() {
-
-	}
-
-	@Override
-	public void actionDel() {
-
-	}
-
-	@Override
-	public void actionReload() {
-
-	}
-
-	@Override
-	public void actionReg() {
-
-	}
-
-	@Override
-	public void actionAbout() {
-
-	}
-
-	@Override
-	public void actionExit() {
-
-	}
-
-	@Override
-	public void actionClose() {
-
-	}
-
-	@Override
-	public void actionPrintPreview() {
-
-	}
-
-	@Override
-	public void actionWord() {
-
-	}
-
-	@Override
-	public void actionExcel() {
-
-	}
+	
 
 	@Override
 	public void showWelcome() {

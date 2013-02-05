@@ -6,7 +6,8 @@ import com.orientechnologies.orient.core.record.impl.ODocument;
 import javax.swing.*;
 
 public interface WidgetInterface {
-	public void build(ODatabaseDocumentTx db);
-	public void load(ODocument model);
-	public JPanel getPanel();
+	void init();
+	void build(ODatabaseDocumentTx db);
+	void load(ODocument model);
+	JPanel getPanel();
 }
