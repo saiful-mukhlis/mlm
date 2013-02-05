@@ -218,8 +218,8 @@ public class EditPanelAbs implements EditPanel {
 	}
 
 	public void dispose(Object o) {
-		if (o instanceof Window) {
-			((Window) o).dispose();
+		if (o instanceof WindowInterfaces) {
+			((WindowInterfaces) o).dispose();
 		} else {
 			if (o instanceof Component) {
 				dispose(((Component) o).getParent());

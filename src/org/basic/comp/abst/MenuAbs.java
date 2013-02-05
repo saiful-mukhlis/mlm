@@ -19,7 +19,7 @@ import java.awt.event.KeyEvent;
 
 public class MenuAbs implements Menu {
 	protected JMenuBar menuBar;
-	protected Window window;
+	protected WindowInterfaces window;
 	protected JMenu file;
 	protected JMenuItem login;
 //	protected JMenuItem exit;
@@ -187,12 +187,12 @@ public class MenuAbs implements Menu {
 	}
 
 	@Override
-	public Window getWindow() {
+	public WindowInterfaces getWindow() {
 		return window;
 	}
 
 	@Override
-	public void setWindow(Window window) {
+	public void setWindow(WindowInterfaces window) {
 		this.window = window;
 	}
 

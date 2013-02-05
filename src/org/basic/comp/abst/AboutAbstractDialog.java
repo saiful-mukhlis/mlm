@@ -83,8 +83,8 @@ public abstract class AboutAbstractDialog extends TitleAbstract implements About
 	}
 	
 	public void dispose(Object o) {
-		if (o instanceof Window) {
-			((Window) o).dispose();
+		if (o instanceof WindowInterfaces) {
+			((WindowInterfaces) o).dispose();
 		} else {
 			if (o instanceof Component) {
 				dispose(((Component) o).getParent());

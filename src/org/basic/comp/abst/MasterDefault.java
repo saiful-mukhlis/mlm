@@ -373,9 +373,9 @@ public abstract  class MasterDefault extends MasterAdapter implements MasterDefa
 		}
 	}
 	
-	public Window getWindow(Object o){
-		if (o instanceof Window) {
-			return ((Window) o);
+	public WindowInterfaces getWindow(Object o){
+		if (o instanceof WindowInterfaces) {
+			return ((WindowInterfaces) o);
 		} else {
 			if (o instanceof Component) {
 				return  getWindow(((Component) o).getParent());

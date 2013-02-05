@@ -10,9 +10,9 @@ public interface Toolbar {
 
 	public abstract void setPanel(JPanel panel);
 
-	public abstract Window getWindow();
+	public abstract WindowInterfaces getWindow();
 
-	public abstract void setWindow(Window window);
+	public abstract void setWindow(WindowInterfaces window);
 	
 	public void init();
 	

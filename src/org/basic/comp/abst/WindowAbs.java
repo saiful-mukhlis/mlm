@@ -26,7 +26,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class WindowAbs implements Window {
+public class WindowAbs implements WindowInterfaces {
 	protected Toolbar toolbar;
 	protected Menu menu;
 	protected ToolWindowManager toolWindowManager;

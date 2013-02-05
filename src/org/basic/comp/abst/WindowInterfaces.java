@@ -2,7 +2,7 @@ package org.basic.comp.abst;
 
 import java.util.HashMap;
 
-public interface Window {
+public interface WindowInterfaces {
 
 	String getIdMasterOpen();
 

@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.AbstractAction;
 import javax.swing.KeyStroke;
 
-import org.basic.comp.abst.Window;
+import org.basic.comp.abst.WindowInterfaces;
 import org.basic.comp.base.LoginDialog;
 
 import com.basic.icon.IconBase;
@@ -14,8 +14,8 @@ import com.global.App;
 import com.global.DataUser;
 
 public class LoginAction extends AbstractAction {
-	private Window window;
-	public LoginAction(Window window) {
+	private WindowInterfaces window;
+	public LoginAction(WindowInterfaces window) {
         super(LApp.LOGIN, IconBase.LOGIN); 
         this.window=window;
         putValue(SHORT_DESCRIPTION, LApp.LOGIN_DESC);  

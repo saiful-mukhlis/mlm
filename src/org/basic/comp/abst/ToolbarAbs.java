@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class ToolbarAbs implements Toolbar {
 	protected JPanel panel;
-	protected Window window;
+	protected WindowInterfaces window;
 	
 	public void init() {
 		panel=new JPanel();
@@ -27,12 +27,12 @@ public class ToolbarAbs implements Toolbar {
 	}
 
 	@Override
-	public Window getWindow() {
+	public WindowInterfaces getWindow() {
 		return window;
 	}
 
 	@Override
-	public void setWindow(Window window) {
+	public void setWindow(WindowInterfaces window) {
 		this.window = window;
 	}
 

@@ -43,9 +43,9 @@ public interface Master {
 
 	void setLebar(double lebar);
 
-	Window getWindow();
+	WindowInterfaces getWindow();
 
-	void setWindow(Window window);
+	void setWindow(WindowInterfaces window);
 
 	void requestDefaultSelected();
 

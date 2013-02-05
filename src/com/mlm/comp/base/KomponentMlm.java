@@ -32,12 +32,12 @@ public class KomponentMlm extends Komponent{
 		ODatabaseDocumentTx db = App.getDbd();
 	    ODatabaseRecordThreadLocal. INSTANCE.set(db);
 	    String type=komponent.getTypeMaster();
-		if (type.equals(Window.PEGAWAI)) {
+		if (type.equals(WindowInterfaces.PEGAWAI)) {
 			komponent.setWidgetTop(new UsrM());
-		}else if (type.equals(Window.HAK_AKSES)) {
+		}else if (type.equals(WindowInterfaces.HAK_AKSES)) {
 			komponent.setWidgetTop(new GrpM());
 		}
-		else if (type.equals(Window.JENIS_PEKERJAAN)) {
+		else if (type.equals(WindowInterfaces.JENIS_PEKERJAAN)) {
 			komponent.setWidgetTop(new JenisPekerjaanM());
 		}
 		else if (type.equals(WindowMlm.PAKET)) {

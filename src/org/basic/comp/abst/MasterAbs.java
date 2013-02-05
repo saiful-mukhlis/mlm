@@ -19,7 +19,7 @@ public class MasterAbs implements Master {
 	protected ToolbarSmall toolbarSmall;
 	protected int devide;
 	protected double lebar=0.5;
-	protected Window window;
+	protected WindowInterfaces window;
 	protected ViewMasterAction viewMasterAction;
 //	protected ViewContextAction vca;
 //	protected AddContentAction aca;
@@ -27,11 +27,11 @@ public class MasterAbs implements Master {
 	
 	protected FactorySearch factorySearch;
 
-	public Window getWindow() {
+	public WindowInterfaces getWindow() {
 		return window;
 	}
 
-	public void setWindow(Window window) {
+	public void setWindow(WindowInterfaces window) {
 		this.window = window;
 	}
 

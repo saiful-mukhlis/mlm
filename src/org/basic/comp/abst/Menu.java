@@ -10,9 +10,9 @@ public interface Menu {
 
 	void build(ODatabaseDocumentTx db);
 
-	Window getWindow();
+	WindowInterfaces getWindow();
 
-	void setWindow(Window window);
+	void setWindow(WindowInterfaces window);
 
 	JMenuBar getMenuBar();
 	

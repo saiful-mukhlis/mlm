@@ -8,7 +8,7 @@ import java.util.List;
 
 import javax.swing.*;
 
-import org.basic.comp.abst.Window;
+import org.basic.comp.abst.WindowInterfaces;
 
 import com.basic.comp.impl.master.GrpMaster;
 import com.basic.lang.LApp;
@@ -16,12 +16,12 @@ import com.basic.lang.LApp;
 public class WelcomePanel {
 
 	private JPanel panel;
-	protected Window window;
+	protected WindowInterfaces window;
 
 	private JPanel panelLogin, panelExit, panelGrp, panelAddGrp, panelPegawai, panelAddPegawai;
 	private JButton buttonLogin, buttonExit, buttonGrp, buttonAddGrp, buttonPegawai, buttonAddPegawai;
 
-	public void setWindow(Window window) {
+	public void setWindow(WindowInterfaces window) {
 		this.window = window;
 	}
 
@@ -102,7 +102,7 @@ public class WelcomePanel {
 		buildButton(b5, p5);
 		buildButton(b6, p6);
 
-		b5.addActionListener(window.getKomponentMaps().get(Window.PEGAWAI)
+		b5.addActionListener(window.getKomponentMaps().get(WindowInterfaces.PEGAWAI)
 				.getAdd());
 		b4.addActionListener(window.getKomponentMaps()
 				.get(WindowPraktikum.PELANGGAN).getAdd());
